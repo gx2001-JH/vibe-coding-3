@@ -882,6 +882,64 @@ cite::before{content:"("} cite::after{content:")"}
 .wev p{margin:0}
 .pil .pn{position:static;display:inline-grid;place-items:center;width:26px;height:26px;border-radius:8px;background:var(--c);color:#fff;font-size:14px;margin-right:8px;vertical-align:2px;border:0}
 .pil .pn{display:inline-block;text-align:center;line-height:26px;padding:0}
+/* 왜 8렌즈인가 — 장면 넘기기 */
+.wdeck .stbar{grid-template-columns:repeat(var(--n),minmax(0,1fr))}
+.wdeck .stt i{font-style:normal}
+.wsl{padding:22px 26px 18px}
+@media (max-width:640px){.wsl{padding:16px 14px}}
+.wsk{font-size:13px;font-weight:800;color:var(--accent);letter-spacing:.02em}
+.wst{margin:6px 0 16px;font-size:clamp(21px,2.4vw,30px);line-height:1.35;font-weight:800;letter-spacing:-.025em}
+.wst em{font-style:normal;background:linear-gradient(transparent 62%,color-mix(in srgb,var(--accent) 28%,transparent) 0)}
+.wsrc{margin:14px 0 0;font-size:12.5px;color:var(--mute)}
+.wsplit{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:18px;align-items:start}
+.wsplit2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:14px;margin:14px 0}
+@media (max-width:860px){.wsplit,.wsplit2{grid-template-columns:1fr}}
+.wtb{margin:0;background:#fff;border:1px solid var(--line2);border-radius:12px;padding:8px}
+.wtb img{display:block;width:100%} .wtb figcaption{font-size:12.5px;color:#7a746c;padding:6px 4px 0}
+.wstu{display:flex;flex-direction:column;gap:10px}
+.wst1{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:var(--card)}
+.wst1 span{font-size:12.5px;font-weight:800;color:var(--mute)} .wst1 p{margin:4px 0 6px;font-size:15.5px}
+.wst1 b{color:#2E7D6B;font-size:14px}
+.wbig{margin:6px 0 0;font-size:clamp(18px,1.9vw,22px);font-weight:700} .wbig b{color:var(--accent)}
+.wwhy2{margin:16px 0 0;padding:12px 16px;border-radius:12px;background:var(--surface);border-left:4px solid var(--accent);font-size:15.5px;line-height:1.7}
+.wcap{border:2px dashed var(--line);border-radius:14px;padding:14px 18px;background:var(--card)}
+.wcap span{font-size:12.5px;font-weight:800;color:var(--mute)} .wcap p{margin:6px 0 0;font-size:clamp(17px,1.8vw,21px);line-height:1.6}
+.wres,.wres2{border-radius:14px;padding:14px 16px;background:var(--card);border:1px solid var(--line)}
+.wres b{display:block;font-size:clamp(24px,2.6vw,32px);font-weight:800;color:var(--accent);letter-spacing:-.02em}
+.wres2 b{display:block;font-size:17px;font-weight:800}
+.wres p,.wres2 p{margin:6px 0 0;font-size:15px;line-height:1.7}
+.wlens{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;padding:12px 16px;border-radius:12px;background:color-mix(in srgb,var(--accent) 7%,var(--card));border:1px solid var(--line)}
+.wlens p{margin:0;flex:1 1 300px;font-size:15px}
+.wln{display:inline-block;font-size:13.5px;font-weight:800;color:var(--c);background:color-mix(in srgb,var(--c) 13%,transparent);border-radius:999px;padding:2px 10px;margin-right:4px;white-space:nowrap}
+.wladder{display:flex;flex-direction:column-reverse;gap:8px}
+.wlad{width:var(--w);min-width:min(100%,520px);max-width:100%;display:grid;grid-template-columns:34px 130px minmax(0,1fr);gap:10px;align-items:center;padding:10px 14px;border-radius:12px;background:color-mix(in srgb,var(--c) 10%,var(--card));border-left:5px solid var(--c)}
+.wlad>b{width:30px;height:30px;border-radius:50%;background:var(--c);color:#fff;display:grid;place-items:center}
+.wlad span{font-weight:800;color:var(--c)} .wlad p{margin:0;font-size:14.5px}
+@media (max-width:640px){.wlad{grid-template-columns:30px 1fr;width:100%}.wlad p{grid-column:1/-1}}
+.wltg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:760px){.wltg{grid-template-columns:1fr}}
+.wlt{border-radius:16px;padding:16px 18px;background:var(--card);border:1px solid var(--line);border-top:5px solid var(--c);display:flex;flex-direction:column;gap:6px}
+.wltk{font-size:12px;font-weight:800;color:var(--c)}
+.wlt h4{margin:0;font-size:clamp(19px,2vw,23px);font-weight:800;letter-spacing:-.02em}
+.wlt p{margin:0;font-size:15px;line-height:1.7;color:var(--ink2)}
+.wlt div{margin-top:auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding-top:4px}
+.wqvs{display:flex;flex-direction:column;gap:8px}
+.wqv{display:grid;grid-template-columns:150px minmax(0,1fr) 140px;gap:12px;align-items:center;padding:10px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card)}
+.wqv.before{background:var(--surface);border-style:dashed}
+.wqv p{margin:0;font-size:15.5px;font-weight:600} .wqv>span{font-size:13px;font-weight:800;color:var(--mute);text-align:right}
+@media (max-width:760px){.wqv{grid-template-columns:1fr;gap:4px}.wqv>span{text-align:left}}
+.wcmp td.ok{color:#2E7D6B} .wcmp td.no{color:#C0504D} .wcmp small{color:var(--mute)}
+.wlbs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.wlb{font:inherit;font-size:14px;font-weight:800;padding:7px 13px;border-radius:999px;border:1.5px solid color-mix(in srgb,var(--c) 40%,var(--line));background:var(--card);color:var(--c);cursor:pointer}
+.wlb.on{background:var(--c);color:#fff;border-color:var(--c)}
+.wone .wcard{max-width:820px}
+.wkey{text-align:center;margin-top:6px}
+.wdeck .gen{margin:0}
+.wres2 b,.wres b{display:inline;font-size:inherit;color:inherit}
+.wres>b{display:block;font-size:clamp(24px,2.6vw,32px);color:var(--accent)}
+.wres2>b{display:block;font-size:17px}
+.wdeck .stt b{white-space:normal;overflow:visible;text-overflow:clip;font-size:13px;line-height:1.3}
+@media (max-width:760px){.wdeck .stt b{display:none}.wdeck .stt{padding:8px 0;text-align:center}}
 </style></head><body>
 <header class="top wrap"><div class="hl"><div class="brand"><svg viewBox="0 0 100 100" aria-hidden="true"><g fill="#D97757"><rect x="46" y="8" width="8" height="38" rx="4" transform="rotate(0 50 50)"/><rect x="46" y="8" width="8" height="38" rx="4" transform="rotate(45 50 50)"/><rect x="46" y="8" width="8" height="38" rx="4" transform="rotate(90 50 50)"/><rect x="46" y="8" width="8" height="38" rx="4" transform="rotate(135 50 50)"/><rect x="46" y="8" width="8" height="38" rx="4" transform="rotate(180 50 50)"/><rect x="46" y="8" width="8" height="38" rx="4" transform="rotate(225 50 50)"/><rect x="46" y="8" width="8" height="38" rx="4" transform="rotate(270 50 50)"/><rect x="46" y="8" width="8" height="38" rx="4" transform="rotate(315 50 50)"/></g></svg><h1>교과서 문항 하나로 좋은 평가 문항 만들기 <span class="sub2">(8렌즈 · 한글 · 도형)</span></h1></div>
 <p class="lead">바이브 코딩 3편 — 이 사이트 하나로 8렌즈 · 프롬프트 · 한글 변환 · 도형까지 진행합니다.</p></div><div class="hdbtns"><div class="motto">✳ "렌즈는 AI가 돌리고, 판단은 교사가 한다."</div><a class="act" href="#prompts" data-go="prompts">📋 프롬프트 전체</a><a class="act" href="#links" data-go="links">🔗 사이트 전체</a><button class="act helpbtn" data-demo="all">📸 시연 화면</button></div></header>
@@ -914,111 +972,103 @@ cite::before{content:"("} cite::after{content:")"}
 <div class="two">
 <div class="tw" style="--c:#C96442"><b>1교시 · 8렌즈로 바꾸기</b><p><a href="#why" data-go="why">왜 8렌즈인가</a> → <a href="#lens" data-go="lens">8렌즈 한눈에</a> → <a href="#pick" data-go="pick">실습① 문항 고르기</a> → <a href="#make" data-go="make">실습② 8렌즈 한 번에</a> → <a href="#choose" data-go="choose">실습③ 골라 다듬기</a></p></div>
 <div class="tw" style="--c:#6D5BD0"><b>2교시 · 한글로, 도형으로</b><p><a href="#hwp" data-go="hwp">실습④ 한글로 옮기기</a> → <a href="#fig" data-go="fig">실습⑤ 도형 그리기</a> → <a href="#finish" data-go="finish">실습⑥ 한/글에서 완성</a></p></div></div>
-<nav class="pager"><span></span><a class="pn nx" href="#why" data-go="why">다음 · 왜 8렌즈인가 →</a></nav></section><section class="panel" id="p-why" data-tab="why"><div class="ph"><span class="step">시작 · 02/15</span><h2>왜 8렌즈인가 — 이론적 근거</h2><p class="desc">교과서 문항의 성분 하나를 바꾸면 학생의 사고가 바뀌고, 그 사고가 답안에 증거로 남습니다. 학습 이론 · 과제 설계 이론 · 평가 이론이 이를 뒷받침합니다.</p></div>
-<div class="whook">
-<p class="wq">교과서 문항을 그대로 시험에 내면, 우리는 무엇을 재고 있을까?</p>
-<p class="wa">"<b>외운 풀이를 다시 할 수 있는가</b>"입니다.</p>
-<p class="wsub">시험 문항이 교과서 예제와 비슷하면 학생은 외운 풀이를 재현하는 <b>모방 추론</b>으로 풀고, 낯선 문항이어야 근거를 세우는 <b>창의적 추론</b>을 씁니다. <cite>Boesen, Lithner &amp; Palm, 2010</cite></p>
-<div class="wstats">
-<div><b>144개 과제 분석</b><span>과제의 인지적 요구 수준이 학생이 실제로 하는 <em>사고의 수준을 정했다</em>.</span><cite>Stein, Grover &amp; Henningsen, 1996</cite></div>
-<div><b>"선장의 나이"</b><span>답할 수 없는 문제에도 학생들은 주어진 수를 조합해 답을 낸다. 정보가 늘 딱 맞게 주어지는 문항은 <em>이 습관을 보지 못한다</em>.</span><cite>Verschaffel, Greer &amp; De Corte, 2000</cite></div>
-<div><b>약 2,500명 조사</b><span>14~15세 학생들은 예 몇 개 확인이 증명이 아님을 알면서도, <em>스스로는 예에 기대어</em> 논증했다.</span><cite>Healy &amp; Hoyles, 2000</cite></div>
-</div>
-<p class="wpunch">8렌즈는 문항을 <s>더 어렵게</s> 만드는 기술이 아니라,<br><b>점수로 말할 수 있는 것을 바꾸는 기술</b>입니다.</p>
-</div>
-
-<div class="group"><h3>① 하나의 생성 원리 — 문항의 다섯 성분 중 하나만 바꾼다</h3><p>렌즈는 경험으로 모은 요령 목록이 아닙니다</p></div>
-<div class="card gen">
-<p class="genlead">교과서 연습문제는 대개 "<b>학생이 푸는 사람</b>이 되어, <b>한 가지 표현</b>으로, <b>딱 맞게 주어진 조건</b>에서, <b>한 단원의 특수한 수</b>를, <b>정해진 경로</b>로" 계산하는 구조입니다. 이 다섯 성분 중 <b>하나만</b> 바꾸면 여덟 렌즈가 나옵니다.</p>
-<div class="genh"><span>문항의 성분</span><span>교과서 기본값</span><span></span><span>바꾸는 방향</span><span>렌즈</span></div>
-<div class="genr"><div class="genk"><b>A</b><span>역할</span><small>누가 무엇을 하나</small></div><div class="genb">학생은 <b>푸는 사람</b></div><div class="gena">→</div><div class="genc">판단하는 사람 · 만드는 사람</div><div class="genl"><span class="wl" style="--c:#C0504D">① 오류 진단</span><span class="wl" style="--c:#B26A00">② 역으로·열린 답</span></div></div><div class="genr"><div class="genk"><b>B</b><span>표현</span><small>무엇으로 나타내나</small></div><div class="genb"><b>한 가지 표현</b> 안에서 계산</div><div class="gena">→</div><div class="genc">표현과 표현 사이를 옮김</div><div class="genl"><span class="wl" style="--c:#2F6FA8">③ 표현 바꾸기</span></div></div><div class="genr"><div class="genk"><b>C</b><span>조건</span><small>무엇이 주어지나</small></div><div class="genb">필요한 조건이 <b>딱 맞게</b> 주어짐</div><div class="gena">→</div><div class="genc">조건을 바꿈 · 충분한지 판단</div><div class="genl"><span class="wl" style="--c:#2E7D6B">④ 조건 비틀기</span><span class="wl" style="--c:#5B4B8A">⑤ 정보 판단</span></div></div><div class="genr"><div class="genk"><b>D</b><span>범위</span><small>어디까지 성립하나</small></div><div class="genb"><b>한 단원</b>의 특수한 수</div><div class="gena">→</div><div class="genc">특수 → 일반 · 단원 → 다른 단원</div><div class="genl"><span class="wl" style="--c:#8A5A2B">⑥ 일반화</span><span class="wl" style="--c:#3E7C8C">⑦ 연결</span></div></div><div class="genr"><div class="genk"><b>E</b><span>구조</span><small>몇 개의 생각을 잇나</small></div><div class="genb">개념 하나, <b>정해진 경로</b></div><div class="gena">→</div><div class="genc">개념 여러 개를 잇고 경로를 찾음</div><div class="genl"><span class="wl" style="--c:#9A3B5A">⑧ 고난도화</span></div></div>
-<p class="genfoot"><b>왜 하나만 바꾸나?</b> 학습자는 한 측면이 <b>변하고 나머지가 고정될 때</b> 그 측면을 알아차립니다(변이 이론 <cite>Marton, 2015</cite>). 이 다섯 질문은 과제 개작 방식 <cite>Prestage &amp; Perks, 2001</cite>과 학습을 바꾸는 다섯 활동 유형 <cite>Swan, 2005</cite>을 문항의 성분으로 다시 묶은 것입니다.</p>
-</div>
-
-<div class="group"><h3>② 세 개의 기둥 — 학습 · 과제 설계 · 평가</h3><p>렌즈마다 세 가지 질문에 답할 수 있어야 합니다</p></div>
-<div class="pillars">
-<div class="pil" style="--c:#3F74C9"><h4><span class="pn">1</span>학습 이론</h4><p class="pq">왜 이렇게 바꾸면 이해가 드러나고 깊어지나?</p>
-<ul><li><b>변이</b> — 변하는 것과 고정된 것의 대비로 핵심을 본다 <cite>Marton; Watson &amp; Mason</cite></li><li><b>표상</b> — 표현 사이의 전환이 이해의 관문 <cite>Duval; Lesh 외</cite></li><li><b>연결</b> — 이해는 연결망의 크기와 강도 <cite>Hiebert &amp; Carpenter; Skemp</cite></li><li><b>오류</b> — 틀린 예를 분석하면 개념이 정교해진다 <cite>Große &amp; Renkl</cite></li></ul></div>
-<div class="pil" style="--c:#2E7D6B"><h4><span class="pn">2</span>과제 설계 이론</h4><p class="pq">어떻게 바꾸면 학생이 하는 사고가 바뀌나?</p>
-<ul><li><b>과제 개작</b> — 있는 과제를 버리지 않고 조금씩 바꾼다 <cite>Prestage &amp; Perks</cite></li><li><b>문제 만들기</b> — What-if-not, 열린 문제, 좋은 질문 <cite>Brown &amp; Walter; Silver</cite></li><li><b>인지적 요구</b> — 과제의 수준이 사고의 수준을 정한다 <cite>Stein &amp; Smith</cite></li><li><b>창의적 추론</b> — 낯선 문항이어야 추론이 보인다 <cite>Lithner</cite></li></ul></div>
-<div class="pil" style="--c:#C96442"><h4><span class="pn">3</span>평가 이론</h4><p class="pq">바꾼 문항이 무엇을 잰다고 말할 수 있나?</p>
-<ul><li><b>타당도</b> — 빠진 측정과 섞인 요인을 줄여야 점수 해석이 정당하다 <cite>Messick; AERA 외</cite></li><li><b>형성평가</b> — 사고의 증거가 수업 조정으로 이어질 때 학습이 오른다 <cite>Black &amp; Wiliam</cite></li><li><b>진단</b> — 오답 하나가 오개념 하나를 가리키게 <cite>Wiliam</cite></li><li><b>2022 개정 교육과정</b> — 문제해결 · 추론 · 의사소통 · 연결 · 정보처리 역량 평가</li></ul></div>
-</div>
-
-<div class="group"><h3>③ 렌즈별 근거 — 무엇이 바뀌고, 답안에 무엇이 남나</h3><p>카드 아래 "예시 문항 보기"를 누르면 실제 문항으로 이동합니다</p></div>
-<div class="wgrid"><article class="wcard" style="--c:#C0504D">
+<nav class="pager"><span></span><a class="pn nx" href="#why" data-go="why">다음 · 왜 8렌즈인가 →</a></nav></section><section class="panel" id="p-why" data-tab="why"><div class="ph"><span class="step">시작 · 02/15</span><h2>왜 8렌즈인가 — 이론적 근거</h2><p class="desc">열 장면을 넘기며 봅니다. 왜 교과서 문항 그대로는 부족한지, 렌즈가 학생의 생각을 어떻게 바꾸고 무엇을 새로 재는지.</p></div><div class="stepper full wdeck" data-tab="why" data-cur="0"><div class="stbar" style="--n:10"><button class="stt on" data-st="0"><i>1</i><b>같은 정답</b></button><button class="stt" data-st="1"><i>2</i><b>선장의 나이</b></button><button class="stt" data-st="2"><i>3</i><b>예 = 증명?</b></button><button class="stt" data-st="3"><i>4</i><b>과제 수준</b></button><button class="stt" data-st="4"><i>5</i><b>하나만 바꾼다</b></button><button class="stt" data-st="5"><i>6</i><b>학습 이론</b></button><button class="stt" data-st="6"><i>7</i><b>질문 바꾸기</b></button><button class="stt" data-st="7"><i>8</i><b>같은 점수?</b></button><button class="stt" data-st="8"><i>9</i><b>렌즈별 근거</b></button><button class="stt" data-st="9"><i>10</i><b>정리</b></button></div><div class="stbody"><div class="stpane wsl on" data-st="0"><div class="wsk">장면 1 · 문제 제기</div><h3 class="wst">교과서 문항 그대로 내면, 두 학생이 <em>똑같이 만점</em>입니다</h3>
+<div class="wsplit"><figure class="wtb"><img src="img/items/04_p135.png" alt="교과서 문항"><figcaption>교과서 p.135 · 정답 a = −1/4, b = −4</figcaption></figure>
+<div class="wstu">
+<div class="wst1 ok"><span>민서 · 이해한 학생</span><p>"직선이 (8, −2)를 지나니 a = −1/4. P는 제2사분면이라 x는 음수일 수밖에 없어."</p><b>정답 ✔</b></div>
+<div class="wst1 ok"><span>준호 · 외운 학생</span><p>"예제랑 똑같네. 점을 y = ax에 넣고, 나온 값을 y = b/x에 넣으면 끝."</p><b>정답 ✔</b></div>
+<p class="wbig">시험지는 <b>두 학생의 차이를 보지 못합니다.</b></p></div></div>
+<div class="wwhy2">교과서 예제와 닮은 문항은 외운 풀이를 다시 해서(<b>모방 추론</b>) 풀립니다. 근거를 세워 새로 생각하는 <b>창의적 추론</b>은 낯선 문항에서만 드러납니다.</div>
+<p class="wsrc">근거 · Boesen, Lithner &amp; Palm(2010) — 시험 문항의 유형과 학생이 실제로 쓰는 추론의 관계</p></div><div class="stpane wsl" data-st="1"><div class="wsk">장면 2 · 정보가 늘 딱 맞으면</div><h3 class="wst">"선장은 몇 살일까요?" — 학생들은 <em>그래도 답을 냅니다</em></h3>
+<div class="wcap"><span>실제로 학생들에게 낸 문제</span><p>배에 <b>양 26마리</b>와 <b>염소 10마리</b>가 타고 있습니다. <b>선장은 몇 살일까요?</b></p></div>
+<div class="wsplit2"><div class="wres"><b>"36살이요."</b><p>답할 수 없는 문제인데도, 많은 초등학생이 문제에 나온 수를 더해 답을 적었습니다.</p></div>
+<div class="wres2"><b>왜?</b><p>필요한 정보만 <b>딱 맞게</b> 주는 문제만 풀어 온 학생은 "문제에 나온 수는 다 써서 답을 내야 한다"고 배웁니다. 이런 문항으로는 <b>그 습관을 발견할 수도 없습니다.</b></p></div></div>
+<div class="wlens"><b class="wln" style="--c:#5B4B8A">⑤ 정보 판단</b><p>"삼각형의 넓이는 4이고 a = 1/4이다. a, b가 하나로 정해지는가?" — 수만 넣는 학생은 <b>b = −4</b>라고 적고, 그래프를 떠올리는 학생은 <b>"이런 두 그래프는 만나지 않으니 그런 a, b는 없다"</b>고 판단합니다.</p></div>
+<p class="wsrc">근거 · Verschaffel, Greer &amp; De Corte(2000) <i>Making Sense of Word Problems</i>가 정리한 "선장의 나이" 연구들</p></div><div class="stpane wsl" data-st="2"><div class="wsk">장면 3 · 일반화</div><h3 class="wst">"세 번 맞았으니까 <em>항상</em> 맞아요"</h3>
+<div class="wcap"><span>학생 답안</span><p>1 + 3 = 4, 5 + 7 = 12, 9 + 11 = 20 … <b>그러니까 홀수와 홀수를 더하면 항상 짝수이다.</b></p></div>
+<div class="wsplit2"><div class="wres"><b>약 2,500명</b><p>영국 14~15세 학생들은 이런 답이 <b>증명이 아님을 알면서도</b>, 자기가 직접 쓸 때는 예 몇 개로 끝내는 경우가 많았습니다.</p></div>
+<div class="wres2"><b>그래서</b><p>"값을 구하시오"만 묻는 시험으로는 <b>예로 확인하는 학생과 이유로 설명하는 학생</b>을 구별할 수 없습니다.</p></div></div>
+<div class="wlens"><b class="wln" style="--c:#8A5A2B">⑥ 일반화</b><p>"점 P를 (p, q)로 놓고, P가 어디에 있든 넓이가 항상 같은 이유를 설명하시오." → <b>추측과 정당화</b>를 구별합니다.</p></div>
+<p class="wsrc">근거 · Healy &amp; Hoyles(2000) 대수 증명 개념 조사 · Mason(1996) 일반성은 대수적 사고의 뿌리</p></div><div class="stpane wsl" data-st="3"><div class="wsk">장면 4 · 같은 단원, 다른 사고</div><h3 class="wst">문항의 수준이 <em>학생이 하는 생각의 수준</em>을 정합니다</h3>
+<div class="wladder"><div class="wlad" style="--c:#9C9488;--w:55%"><b>1</b><span>암기</span><p>"반비례 관계의 식의 꼴을 쓰시오."</p></div><div class="wlad" style="--c:#B26A00;--w:70%"><b>2</b><span>연결 없는 절차</span><p>교과서 p.135 "a, b의 값을 구하시오." — 정해진 순서대로 대입</p></div><div class="wlad" style="--c:#2E7D6B;--w:85%"><b>3</b><span>연결 있는 절차</span><p><b class="wln" style="--c:#2F6FA8">③ 표현 바꾸기</b> "사다리꼴과 삼각형의 넓이가 같은 이유를 설명하시오."</p></div><div class="wlad" style="--c:#C96442;--w:100%"><b>4</b><span>수학 하기</span><p><b class="wln" style="--c:#9A3B5A">⑧ 고난도화</b> "네 교점으로 만든 사각형의 넓이를 두 가지 방법으로 구하고 확인하시오."</p></div></div>
+<div class="wwhy2">수업에서 쓰인 수학 과제 <b>144개</b>를 분석한 결과, 높은 수준의 과제에서 학생의 <b>고차적 사고</b>가 가장 많이 일어났습니다. 낮은 수준의 과제로는 높은 수준의 사고가 일어나지도, 측정되지도 않습니다.</div>
+<p class="wsrc">근거 · Stein, Grover &amp; Henningsen(1996) · Stein &amp; Smith(1998) 과제의 인지적 요구 수준 4단계</p></div><div class="stpane wsl" data-st="4"><div class="wsk">장면 5 · 렌즈는 어디서 왔나</div><h3 class="wst">문항의 다섯 성분 중 <em>하나만</em> 바꾸면 여덟 렌즈가 나옵니다</h3>
+<div class="card gen"><div class="genh"><span>문항의 성분</span><span>교과서 기본값</span><span></span><span>바꾸는 방향</span><span>렌즈</span></div><div class="genr"><div class="genk"><b>A</b><span>역할</span><small>누가 무엇을 하나</small></div><div class="genb">학생은 <b>푸는 사람</b></div><div class="gena">→</div><div class="genc">판단하는 사람 · 만드는 사람</div><div class="genl"><span class="wl" style="--c:#C0504D">① 오류 진단</span><span class="wl" style="--c:#B26A00">② 역으로·열린 답</span></div></div><div class="genr"><div class="genk"><b>B</b><span>표현</span><small>무엇으로 나타내나</small></div><div class="genb"><b>한 가지 표현</b> 안에서 계산</div><div class="gena">→</div><div class="genc">표현과 표현 사이를 옮김</div><div class="genl"><span class="wl" style="--c:#2F6FA8">③ 표현 바꾸기</span></div></div><div class="genr"><div class="genk"><b>C</b><span>조건</span><small>무엇이 주어지나</small></div><div class="genb">필요한 조건이 <b>딱 맞게</b> 주어짐</div><div class="gena">→</div><div class="genc">조건을 바꿈 · 충분한지 판단</div><div class="genl"><span class="wl" style="--c:#2E7D6B">④ 조건 비틀기</span><span class="wl" style="--c:#5B4B8A">⑤ 정보 판단</span></div></div><div class="genr"><div class="genk"><b>D</b><span>범위</span><small>어디까지 성립하나</small></div><div class="genb"><b>한 단원</b>의 특수한 수</div><div class="gena">→</div><div class="genc">특수 → 일반 · 단원 → 다른 단원</div><div class="genl"><span class="wl" style="--c:#8A5A2B">⑥ 일반화</span><span class="wl" style="--c:#3E7C8C">⑦ 연결</span></div></div><div class="genr"><div class="genk"><b>E</b><span>구조</span><small>몇 개의 생각을 잇나</small></div><div class="genb">개념 하나, <b>정해진 경로</b></div><div class="gena">→</div><div class="genc">개념 여러 개를 잇고 경로를 찾음</div><div class="genl"><span class="wl" style="--c:#9A3B5A">⑧ 고난도화</span></div></div></div>
+<div class="wwhy2"><b>왜 하나만?</b> 한 가지가 변하고 나머지가 고정될 때 학생은 <b>그 한 가지</b>를 알아차립니다. 여러 개를 한꺼번에 바꾸면 무엇이 결과를 바꿨는지 보이지 않습니다.</div>
+<p class="wsrc">근거 · 변이 이론 Marton(2015) · 과제 개작 Prestage &amp; Perks(2001) · 다섯 활동 유형 Swan(2005)</p></div><div class="stpane wsl" data-st="5"><div class="wsk">장면 6 · 학습 이론</div><h3 class="wst">이해는 이렇게 <em>드러나고 깊어집니다</em></h3><div class="wltg"><div class="wlt" style="--c:#3F74C9"><span class="wltk">변이</span><h4>하나만 바꿔야 보인다</h4><p>조건 하나만 바꾼 ④에서 학생은 "넓이를 정하는 것은 y좌표뿐"임을 봅니다.</p><div><b class="wln" style="--c:#2E7D6B">④ 조건 비틀기</b><cite>Marton, 2015</cite></div></div><div class="wlt" style="--c:#6D5BD0"><span class="wltk">표상</span><h4>옮길 수 있어야 안다</h4><p>표 → 식 → 그래프 → 넓이로 옮기지 못하면, 식을 풀 줄 알아도 이해한 것이 아닙니다.</p><div><b class="wln" style="--c:#2F6FA8">③ 표현 바꾸기</b><cite>Duval, 2006</cite></div></div><div class="wlt" style="--c:#2E7D6B"><span class="wltk">연결</span><h4>이어져 있어야 꺼내 쓴다</h4><p>"넓이 12 m² 텃밭"에서 반비례를 알아보는 학생은 지식이 교과서 밖까지 이어져 있습니다.</p><div><b class="wln" style="--c:#3E7C8C">⑦ 연결</b><cite>Hiebert &amp; Carpenter, 1992</cite></div></div><div class="wlt" style="--c:#C0504D"><span class="wltk">오류</span><h4>틀린 것을 고쳐 봐야 원리가 남는다</h4><p>민준이의 틀린 풀이에서 "처음 틀린 줄"을 찾는 학생은 공식을 언제 쓰는지 압니다.</p><div><b class="wln" style="--c:#C0504D">① 오류 진단</b><cite>Große &amp; Renkl, 2007</cite></div></div></div></div><div class="stpane wsl" data-st="6"><div class="wsk">장면 7 · 과제 설계</div><h3 class="wst">상황은 그대로, <em>질문만 바꿔도</em> 학생의 역할이 바뀝니다</h3>
+<div class="wqvs"><div class="wqv before"><div class="wqvl"><b class=wln style=--c:#7A746C>Before</b></div><p>"a, b의 값을 구하시오."</p><span>외운 순서대로 대입</span></div><div class="wqv"><div class="wqvl"><b class="wln" style="--c:#C0504D">① 오류 진단</b></div><p>"민준이의 풀이에서 처음 틀린 단계는? 왜 틀렸나?"</p><span>판단하는 사람</span></div><div class="wqv"><div class="wqvl"><b class="wln" style="--c:#B26A00">② 역으로·열린 답</b></div><p>"직사각형 넓이가 12가 되는 경우를 모두 찾으시오."</p><span>만드는 사람</span></div><div class="wqv"><div class="wqvl"><b class="wln" style="--c:#2E7D6B">④ 조건 비틀기</b></div><p>"조건을 이렇게 바꾸면 넓이는? 서윤이의 말은 옳은가?"</p><span>관계를 보는 사람</span></div><div class="wqv"><div class="wqvl"><b class="wln" style="--c:#5B4B8A">⑤ 정보 판단</b></div><p>"이 정보만으로 a, b가 정해지는가?"</p><span>판단하는 사람</span></div></div>
+<div class="wwhy2">새 문항을 백지에서 만들 필요가 없습니다. 이미 성취기준에 맞춰진 교과서 문항을 버리지 않고 <b>질문만 바꾸는 것</b>이 검증된 과제 설계 방법입니다.</div>
+<p class="wsrc">근거 · Prestage &amp; Perks(2001) 과제 개작 · Swan(2005) 오류 분석·문제 만들기 · Brown &amp; Walter(2005) What-if-not</p></div><div class="stpane wsl" data-st="7"><div class="wsk">장면 8 · 평가</div><h3 class="wst">렌즈를 쓰면 <em>같은 점수였던 두 학생이 갈립니다</em></h3>
+<div class="card"><table class="tbl wcmp"><tr><th>문항</th><th>민서 · 이해한 학생</th><th>준호 · 외운 학생</th></tr>
+<tr><td><b>Before</b> a, b 구하기</td><td class="ok">정답 ✔</td><td class="ok">정답 ✔</td></tr>
+<tr><td><b class="wln" style="--c:#2E7D6B">④ 조건 비틀기</b><br><small>"(4, −2)로 바꾸면 직선이 가팔라지니 넓이가 작아져." 옳은가?</small></td><td class="ok">"아니다. 넓이는 OC와 P, Q의 y좌표로만 정해져서 그대로다." ✔</td><td class="no">"맞다. 가파르면 작아진다." ✘</td></tr>
+<tr><td><b class="wln" style="--c:#5B4B8A">⑤ 정보 판단</b><br><small>넓이 4, a = 1/4 → a, b가 정해지는가?</small></td><td class="ok">"a &gt; 0, b &lt; 0이라 두 그래프가 만나지 않는다. 그런 a, b는 없다." ✔</td><td class="no">"넓이로 b = −4, a = 1/4." ✘</td></tr></table></div>
+<div class="wwhy2">타당한 점수란 <b>재려는 것만 재는</b> 점수입니다. "설명할 수 있다"를 계산으로만 확인하면 빠진 측정이 생기고, 익숙한 유형이 점수를 움직이면 엉뚱한 것을 잽니다. 렌즈는 이 둘을 줄여 <b>오답이 오개념의 이름표</b>가 되게 합니다.</div>
+<p class="wsrc">근거 · Messick(1995) 타당도 · Black &amp; Wiliam(1998) 형성평가 · 2022 개정 교육과정 교과 역량 평가</p></div><div class="stpane wsl" data-st="8"><div class="wsk">장면 9 · 렌즈 하나씩</div><h3 class="wst">렌즈를 눌러 <em>근거와 답안에 남는 것</em>을 확인하세요</h3><div class="wlbs"><button class="wlb on" data-wl="1" style="--c:#C0504D">① 오류 진단</button><button class="wlb" data-wl="2" style="--c:#B26A00">② 역으로·열린 답</button><button class="wlb" data-wl="3" style="--c:#2F6FA8">③ 표현 바꾸기</button><button class="wlb" data-wl="4" style="--c:#2E7D6B">④ 조건 비틀기</button><button class="wlb" data-wl="5" style="--c:#5B4B8A">⑤ 정보 판단</button><button class="wlb" data-wl="6" style="--c:#8A5A2B">⑥ 일반화</button><button class="wlb" data-wl="7" style="--c:#3E7C8C">⑦ 연결</button><button class="wlb" data-wl="8" style="--c:#9A3B5A">⑧ 고난도화</button></div><div class="wone"><article class="wcard" data-wl="1" style="--c:#C0504D">
 <header><b>①</b><div><h4>오류 진단</h4><small>푸는 사람 → 판단하는 사람</small></div></header>
 <p class="wform">"○○의 풀이가 옳은지 판단하고, 처음 틀린 줄을 찾아 고치시오."</p>
 <ul class="wwhy"><li>오류가 섞인 풀이를 찾아 고치게 하면 <b>원리 이해와 먼 전이</b>가 향상되었다 <cite>Große &amp; Renkl, 2007</cite></li><li>틀린 예와 옳은 예를 <b>비교한</b> 학생이 옳은 예만 본 학생보다 개념을 더 잘 익히고, 설명에서 오개념을 더 자주 짚었다 <cite>Durkin &amp; Rittle-Johnson, 2012</cite></li></ul>
 <div class="wev"><span>답안에 남는 것</span><p>틀린 줄과 그 이유 → 규칙을 <b>왜</b> 쓰는지 알고 있는가</p></div>
 <div class="wfoot"><span class="wcomp">역량 · 추론 · 의사소통</span><span class="wcog">연결 없는 절차 <i>→</i> <b>연결 있는 절차</b></span>
 <a class="wgo" href="#lens" data-go="lens" data-lensgo="1">예시 문항 보기 →</a></div>
-</article><article class="wcard" style="--c:#B26A00">
+</article><article class="wcard" data-wl="2" style="--c:#B26A00" hidden>
 <header><b>②</b><div><h4>역으로·열린 답</h4><small>푸는 사람 → 만드는 사람</small></div></header>
 <p class="wform">"답이 ○○이 되도록 조건을 만드시오." / "가능한 것을 모두 찾으시오."</p>
 <ul class="wwhy"><li>학생에게 조건을 만족하는 예를 <b>스스로 만들게</b> 하면 그 학생이 떠올릴 수 있는 "예의 공간"이 드러나고 넓어진다 <cite>Watson &amp; Mason, 2005</cite></li><li>문제 만들기는 문제 해결과 함께 수학적 사고의 핵심 활동이다 <cite>Silver, 1994</cite> · 답이 여럿인 "좋은 질문"과 열린 접근 <cite>Sullivan &amp; Lilburn, 2002; Becker &amp; Shimada, 1997</cite></li></ul>
 <div class="wev"><span>답안에 남는 것</span><p>정의를 <b>조건으로</b> 쓰는 힘, 빠짐없이 경우를 나누는 추론</p></div>
 <div class="wfoot"><span class="wcomp">역량 · 문제해결 · 추론</span><span class="wcog">연결 없는 절차 <i>→</i> <b>수학 하기</b></span>
 <a class="wgo" href="#lens" data-go="lens" data-lensgo="2">예시 문항 보기 →</a></div>
-</article><article class="wcard" style="--c:#2F6FA8">
+</article><article class="wcard" data-wl="3" style="--c:#2F6FA8" hidden>
 <header><b>③</b><div><h4>표현 바꾸기</h4><small>한 표현 → 표현 사이</small></div></header>
 <p class="wform">식 · 표 · 그래프 · 그림 · 말 사이를 옮기거나, 다른 표현을 해석하게 한다.</p>
 <ul class="wwhy"><li>수학적 대상은 표현으로만 다룰 수 있기에, 한 표현에서 다른 표현으로 옮기는 <b>"전환"</b>이 이해의 관문이자 가장 큰 어려움이다 <cite>Duval, 2006</cite></li><li>상황 · 그림 · 말 · 기호 사이의 번역 능력이 개념 이해의 핵심 지표다 <cite>Lesh, Post &amp; Behr, 1987</cite> · 학생들은 그래프를 상황의 <b>그림</b>처럼 읽는 오개념을 흔히 가진다 <cite>Leinhardt 외, 1990; Clement, 1989</cite></li></ul>
 <div class="wev"><span>답안에 남는 것</span><p>표현 사이의 <b>전환</b>, 그래프 · 표를 해석하는 힘</p></div>
 <div class="wfoot"><span class="wcomp">역량 · 의사소통 · 정보처리</span><span class="wcog">암기 · 읽기 <i>→</i> <b>연결 있는 절차</b></span>
 <a class="wgo" href="#lens" data-go="lens" data-lensgo="3">예시 문항 보기 →</a></div>
-</article><article class="wcard" style="--c:#2E7D6B">
+</article><article class="wcard" data-wl="4" style="--c:#2E7D6B" hidden>
 <header><b>④</b><div><h4>조건 비틀기</h4><small>조건을 바꿔 본다</small></div></header>
 <p class="wform">"조건 하나만 바꾸면 어떻게 되는가? 경계에서는? 왜 안 되는가?"</p>
 <ul class="wwhy"><li>조건을 하나씩 나열하고 <b>"이 조건이 아니라면?"</b>을 물으면 조건이 결과에 하는 역할이 드러난다 <cite>Brown &amp; Walter, 2005</cite></li><li>학습자는 한 측면이 <b>변하고 나머지가 고정될 때</b> 비로소 그 측면을 알아차린다 — 변이 이론 <cite>Marton, 2015; Watson &amp; Mason, 2006</cite></li></ul>
 <div class="wev"><span>답안에 남는 것</span><p>조건과 결과의 <b>관계</b>, 경계와 반례</p></div>
 <div class="wfoot"><span class="wcomp">역량 · 추론</span><span class="wcog">연결 없는 절차 <i>→</i> <b>연결 있는 절차</b></span>
 <a class="wgo" href="#lens" data-go="lens" data-lensgo="4">예시 문항 보기 →</a></div>
-</article><article class="wcard" style="--c:#5B4B8A">
+</article><article class="wcard" data-wl="5" style="--c:#5B4B8A" hidden>
 <header><b>⑤</b><div><h4>정보 판단</h4><small>조건의 충분성을 판단</small></div></header>
 <p class="wform">"이 정보만으로 정해지는가? 무엇이 더 필요한가? 빼도 되는 것은?"</p>
 <ul class="wwhy"><li>학생들은 답할 수 없는 문제("선장의 나이")에도 주어진 수를 조합해 답을 낸다 — <b>의미 판단의 정지</b>. 필요한 정보만 정확히 주는 문항은 이 습관을 측정하지 못한다 <cite>Verschaffel, Greer &amp; De Corte, 2000</cite></li><li>상황에서 필요한 정보를 가려 수학 문제로 만드는 <b>"정식화하기"</b>가 수학적 소양의 핵심 과정이다 <cite>OECD PISA 2022</cite> · 정보를 빼거나 더하는 개작 <cite>Prestage &amp; Perks, 2001</cite></li></ul>
 <div class="wev"><span>답안에 남는 것</span><p>정보가 <b>부족 · 충분 · 모순</b>인지 가려내는 판단</p></div>
 <div class="wfoot"><span class="wcomp">역량 · 정보처리 · 문제해결</span><span class="wcog">연결 없는 절차 <i>→</i> <b>연결 있는 절차</b></span>
 <a class="wgo" href="#lens" data-go="lens" data-lensgo="5">예시 문항 보기 →</a></div>
-</article><article class="wcard" style="--c:#8A5A2B">
+</article><article class="wcard" data-wl="6" style="--c:#8A5A2B" hidden>
 <header><b>⑥</b><div><h4>일반화</h4><small>특수 → 일반</small></div></header>
 <p class="wform">"항상 성립하는가? 그 이유는? 몇 개의 예로 충분한가?"</p>
 <ul class="wwhy"><li>일반성을 보고 표현하는 일이 <b>대수적 사고의 뿌리</b>다 <cite>Mason, 1996</cite></li><li>14~15세 약 2,500명 조사에서, 학생들은 예 몇 개로 확인한 것이 증명이 아님을 알면서도 <b>스스로는 예에 기대어</b> 논증했다 <cite>Healy &amp; Hoyles, 2000</cite> · "항상 · 가끔 · 절대 참" 진술 평가 <cite>Swan, 2005</cite></li></ul>
 <div class="wev"><span>답안에 남는 것</span><p>추측과 <b>정당화</b>의 구별, 공식이 나오는 구조</p></div>
 <div class="wfoot"><span class="wcomp">역량 · 추론</span><span class="wcog">암기 <i>→</i> <b>수학 하기</b></span>
 <a class="wgo" href="#lens" data-go="lens" data-lensgo="6">예시 문항 보기 →</a></div>
-</article><article class="wcard" style="--c:#3E7C8C">
+</article><article class="wcard" data-wl="7" style="--c:#3E7C8C" hidden>
 <header><b>⑦</b><div><h4>연결</h4><small>한 단원 → 다른 영역</small></div></header>
 <p class="wform">같은 수학적 관계를 다른 단원 · 다른 영역 · 생활 장면에서 알아보게 한다.</p>
 <ul class="wwhy"><li>수학적 이해는 지식이 <b>연결망 속에 얼마나 많이, 강하게 연결</b>되어 있는가로 설명된다 <cite>Hiebert &amp; Carpenter, 1992</cite></li><li>"어떻게"만 아는 도구적 이해와 "왜"까지 아는 <b>관계적 이해</b>는 낯선 상황에서 갈린다 <cite>Skemp, 1976</cite> · 연결 규준 <cite>NCTM, 2000</cite> · 2022 개정 교육과정 "연결" 역량</li></ul>
 <div class="wev"><span>답안에 남는 것</span><p>처음 보는 맥락에서 <b>같은 관계</b>를 알아보는 힘</p></div>
 <div class="wfoot"><span class="wcomp">역량 · 연결</span><span class="wcog">연결 없는 절차 <i>→</i> <b>연결 있는 절차</b></span>
 <a class="wgo" href="#lens" data-go="lens" data-lensgo="7">예시 문항 보기 →</a></div>
-</article><article class="wcard" style="--c:#9A3B5A">
+</article><article class="wcard" data-wl="8" style="--c:#9A3B5A" hidden>
 <header><b>⑧</b><div><h4>고난도화</h4><small>개념 하나 → 개념의 연결</small></div></header>
 <p class="wform">개념 2~3개를 잇고, 숨은 관계를 찾아야 풀리게 하고, "왜"를 묻는 서술형을 붙인다.</p>
 <ul class="wwhy"><li>정해진 경로가 없고 개념 사이의 관계를 탐구하는 <b>"수학 하기"</b> 수준의 과제에서 고차적 사고가 가장 많이 일어났다 <cite>Stein, Grover &amp; Henningsen, 1996</cite></li><li>익숙한 유형은 외운 풀이로(모방 추론) 풀리고, 낯선 문항이어야 근거를 세우는 <b>창의적 추론</b>이 측정된다 <cite>Lithner, 2008; Boesen, Lithner &amp; Palm, 2010</cite></li></ul>
 <div class="wev"><span>답안에 남는 것</span><p>숨은 관계의 <b>발견</b>, 모방이 아닌 추론</p></div>
 <div class="wfoot"><span class="wcomp">역량 · 문제해결 · 연결</span><span class="wcog">연결 없는 절차 <i>→</i> <b>수학 하기</b></span>
 <a class="wgo" href="#lens" data-go="lens" data-lensgo="8">예시 문항 보기 →</a></div>
-</article></div>
-<p class="meta wnote">인지적 요구 수준은 Stein &amp; Smith(1998)의 네 단계(암기 / 연결 없는 절차 / 연결 있는 절차 / 수학 하기)로 표시한 <b>설계 의도</b>입니다. 수업에서 어떻게 실행하느냐에 따라 실제 수준은 낮아질 수 있습니다 <cite>Stein 외, 1996</cite>.</p>
-
-<div class="group"><h3>④ 렌즈가 좋은 평가로 이어지는 논리</h3><p>설계 → 사고 → 증거 → 해석</p></div>
+</article></div></div><div class="stpane wsl" data-st="9"><div class="wsk">장면 10 · 정리</div><h3 class="wst">렌즈 → 사고 → 증거 → <em>믿을 수 있는 점수</em></h3>
 <div class="chain">
 <div style="--c:#7A746C"><span>1 설계</span><p>문항의 성분 <b>하나</b>를 바꾼다</p></div><i>→</i>
-<div style="--c:#3F74C9"><span>2 사고</span><p>재현이 <b>판단 · 구성 · 전환 · 정당화</b>로 바뀐다</p></div><i>→</i>
+<div style="--c:#3F74C9"><span>2 사고</span><p>재현이 <b>판단 · 구성 · 전환 · 정당화</b>로</p></div><i>→</i>
 <div style="--c:#2E7D6B"><span>3 증거</span><p>틀린 줄, 만든 조건, 반례, 이유가 <b>답안에 남는다</b></p></div><i>→</i>
-<div style="--c:#C96442"><span>4 해석</span><p>점수가 성취기준의 <b>동사</b>에 가까워지고, 오답이 오개념의 이름표가 된다</p></div>
-</div>
-<div class="card valid"><table class="tbl"><tr><th>타당도를 흔드는 것 <cite>Messick, 1995</cite></th><th>교과서 문항 그대로</th><th>렌즈를 쓰면</th></tr>
-<tr><td><b>빠진 측정</b><br><small>구인 과소표현</small></td><td>"설명할 수 있다"를 계산으로만 확인</td><td>①⑥⑧의 "왜"와 "설명하시오"가 그 빈자리를 채운다</td></tr>
-<tr><td><b>섞인 요인</b><br><small>구인 무관 변량</small></td><td>공식 암기 · 계산 실수 · 익숙한 유형이 점수를 움직인다</td><td>계산량은 그대로, 생각의 단계로 변별한다(P1 규칙)</td></tr>
-<tr><td><b>같은 점수, 다른 이해</b></td><td>이해한 학생과 외운 학생이 같은 점수</td><td>④⑤에서 "왜 그대로인가", "무엇이 더 필요한가"로 갈린다</td></tr></table></div>
+<div style="--c:#C96442"><span>4 해석</span><p>점수가 <b>"설명한다 · 판단한다"</b>를 잰다</p></div></div>
+<p class="wpunch">8렌즈는 문항을 <s>더 어렵게</s> 만드는 기술이 아니라,<br><b>점수로 말할 수 있는 것을 바꾸는 기술</b>입니다.</p>
 <div class="acts"><a class="act big pri" href="#lens" data-go="lens">8렌즈 실제 문항 보기 →</a><a class="act big" href="#pick" data-go="pick">바로 실습① 시작</a></div>
-<details class="card more"><summary style="padding:14px 16px;cursor:pointer"><b>참고 문헌 33편</b></summary><ol class="refs"><li>Adams, D. M., McLaren, B. M., Durkin, K., Mayer, R. E., Rittle-Johnson, B., Isotani, S., &amp; van Velsen, M. (2014). Using erroneous examples to improve mathematics learning with a web-based tutoring system. <i>Computers in Human Behavior, 36</i>, 401–411.</li><li>AERA, APA, &amp; NCME (2014). <i>Standards for educational and psychological testing</i>. AERA.</li><li>Becker, J. P., &amp; Shimada, S. (Eds.) (1997). <i>The open-ended approach: A new proposal for teaching mathematics</i>. NCTM.</li><li>Black, P., &amp; Wiliam, D. (1998). Assessment and classroom learning. <i>Assessment in Education, 5</i>(1), 7–74.</li><li>Boesen, J., Lithner, J., &amp; Palm, T. (2010). The relation between types of assessment tasks and the mathematical reasoning students use. <i>Educational Studies in Mathematics, 75</i>(1), 89–105.</li><li>Brown, S. I., &amp; Walter, M. I. (2005). <i>The art of problem posing</i> (3rd ed.). Lawrence Erlbaum.</li><li>Clement, J. (1989). The concept of variation and misconceptions in Cartesian graphing. <i>Focus on Learning Problems in Mathematics, 11</i>(1–2), 77–87.</li><li>Durkin, K., &amp; Rittle-Johnson, B. (2012). The effectiveness of using incorrect examples to support learning about decimal magnitude. <i>Learning and Instruction, 22</i>(3), 206–214.</li><li>Duval, R. (2006). A cognitive analysis of problems of comprehension in a learning of mathematics. <i>Educational Studies in Mathematics, 61</i>, 103–131.</li><li>Große, C. S., &amp; Renkl, A. (2007). Finding and fixing errors in worked examples: Can this foster learning outcomes? <i>Learning and Instruction, 17</i>(6), 612–634.</li><li>Gu, L., Huang, R., &amp; Marton, F. (2004). Teaching with variation: A Chinese way of promoting effective mathematics learning. In L. Fan 외 (Eds.), <i>How Chinese learn mathematics</i> (pp. 309–347). World Scientific.</li><li>Healy, L., &amp; Hoyles, C. (2000). A study of proof conceptions in algebra. <i>Journal for Research in Mathematics Education, 31</i>(4), 396–428.</li><li>Hiebert, J., &amp; Carpenter, T. P. (1992). Learning and teaching with understanding. In D. A. Grouws (Ed.), <i>Handbook of research on mathematics teaching and learning</i> (pp. 65–97). Macmillan.</li><li>Leinhardt, G., Zaslavsky, O., &amp; Stein, M. K. (1990). Functions, graphs, and graphing: Tasks, learning, and teaching. <i>Review of Educational Research, 60</i>(1), 1–64.</li><li>Lesh, R., Post, T., &amp; Behr, M. (1987). Representations and translations among representations in mathematics learning and problem solving. In C. Janvier (Ed.), <i>Problems of representation in the teaching and learning of mathematics</i> (pp. 33–40). Lawrence Erlbaum.</li><li>Lithner, J. (2008). A research framework for creative and imitative reasoning. <i>Educational Studies in Mathematics, 67</i>(3), 255–276.</li><li>Marton, F. (2015). <i>Necessary conditions of learning</i>. Routledge.</li><li>Mason, J. (1996). Expressing generality and roots of algebra. In N. Bednarz, C. Kieran, &amp; L. Lee (Eds.), <i>Approaches to algebra</i> (pp. 65–86). Kluwer.</li><li>Messick, S. (1995). Validity of psychological assessment. <i>American Psychologist, 50</i>(9), 741–749.</li><li>NCTM (2000). <i>Principles and standards for school mathematics</i>. NCTM.</li><li>OECD (2023). <i>PISA 2022 assessment and analytical framework</i>. OECD Publishing.</li><li>Prestage, S., &amp; Perks, P. (2001). <i>Adapting and extending secondary mathematics activities: New tasks for old</i>. David Fulton.</li><li>Silver, E. A. (1994). On mathematical problem posing. <i>For the Learning of Mathematics, 14</i>(1), 19–28.</li><li>Skemp, R. R. (1976). Relational understanding and instrumental understanding. <i>Mathematics Teaching, 77</i>, 20–26.</li><li>Stein, M. K., Grover, B. W., &amp; Henningsen, M. (1996). Building student capacity for mathematical thinking and reasoning: An analysis of mathematical tasks used in reform classrooms. <i>American Educational Research Journal, 33</i>(2), 455–488.</li><li>Stein, M. K., &amp; Smith, M. S. (1998). Mathematical tasks as a framework for reflection. <i>Mathematics Teaching in the Middle School, 3</i>(4), 268–275.</li><li>Sullivan, P., &amp; Lilburn, P. (2002). <i>Good questions for math teaching: Why ask them and what to ask, K–6</i>. Math Solutions.</li><li>Swan, M. (2005). <i>Improving learning in mathematics: Challenges and strategies</i>. DfES Standards Unit.</li><li>Verschaffel, L., Greer, B., &amp; De Corte, E. (2000). <i>Making sense of word problems</i>. Swets &amp; Zeitlinger.</li><li>Watson, A., &amp; Mason, J. (2005). <i>Mathematics as a constructive activity: Learners generating examples</i>. Lawrence Erlbaum.</li><li>Watson, A., &amp; Mason, J. (2006). Seeing an exercise as a single mathematical object: Using variation to structure sense-making. <i>Mathematical Thinking and Learning, 8</i>(2), 91–111.</li><li>Wiliam, D. (2011). <i>Embedded formative assessment</i>. Solution Tree.</li><li>교육부 (2022). <i>수학과 교육과정</i> (교육부 고시 제2022-33호 [별책 8]).</li></ol></details>
-<nav class="pager"><a class="pn" href="#home" data-go="home">← 시작하기</a><a class="pn nx" href="#lens" data-go="lens">다음 · 8렌즈 한눈에 →</a></nav></section><section class="panel" id="p-lens" data-tab="lens"><div class="ph"><span class="step">시작 · 03/15</span><h2>8렌즈 한눈에 — 한 문항이 여덟 문항이 된다</h2><p class="desc">렌즈를 하나씩 눌러 보세요. 같은 교과서 문항이 렌즈마다 어떤 시험 문항이 되는지 실제 결과(문항 + 그림)로 보여 줍니다.</p></div>
+<details class="card more"><summary style="padding:14px 16px;cursor:pointer"><b>참고 문헌 33편</b></summary><ol class="refs"><li>Adams, D. M., McLaren, B. M., Durkin, K., Mayer, R. E., Rittle-Johnson, B., Isotani, S., &amp; van Velsen, M. (2014). Using erroneous examples to improve mathematics learning with a web-based tutoring system. <i>Computers in Human Behavior, 36</i>, 401–411.</li><li>AERA, APA, &amp; NCME (2014). <i>Standards for educational and psychological testing</i>. AERA.</li><li>Becker, J. P., &amp; Shimada, S. (Eds.) (1997). <i>The open-ended approach: A new proposal for teaching mathematics</i>. NCTM.</li><li>Black, P., &amp; Wiliam, D. (1998). Assessment and classroom learning. <i>Assessment in Education, 5</i>(1), 7–74.</li><li>Boesen, J., Lithner, J., &amp; Palm, T. (2010). The relation between types of assessment tasks and the mathematical reasoning students use. <i>Educational Studies in Mathematics, 75</i>(1), 89–105.</li><li>Brown, S. I., &amp; Walter, M. I. (2005). <i>The art of problem posing</i> (3rd ed.). Lawrence Erlbaum.</li><li>Clement, J. (1989). The concept of variation and misconceptions in Cartesian graphing. <i>Focus on Learning Problems in Mathematics, 11</i>(1–2), 77–87.</li><li>Durkin, K., &amp; Rittle-Johnson, B. (2012). The effectiveness of using incorrect examples to support learning about decimal magnitude. <i>Learning and Instruction, 22</i>(3), 206–214.</li><li>Duval, R. (2006). A cognitive analysis of problems of comprehension in a learning of mathematics. <i>Educational Studies in Mathematics, 61</i>, 103–131.</li><li>Große, C. S., &amp; Renkl, A. (2007). Finding and fixing errors in worked examples: Can this foster learning outcomes? <i>Learning and Instruction, 17</i>(6), 612–634.</li><li>Gu, L., Huang, R., &amp; Marton, F. (2004). Teaching with variation: A Chinese way of promoting effective mathematics learning. In L. Fan 외 (Eds.), <i>How Chinese learn mathematics</i> (pp. 309–347). World Scientific.</li><li>Healy, L., &amp; Hoyles, C. (2000). A study of proof conceptions in algebra. <i>Journal for Research in Mathematics Education, 31</i>(4), 396–428.</li><li>Hiebert, J., &amp; Carpenter, T. P. (1992). Learning and teaching with understanding. In D. A. Grouws (Ed.), <i>Handbook of research on mathematics teaching and learning</i> (pp. 65–97). Macmillan.</li><li>Leinhardt, G., Zaslavsky, O., &amp; Stein, M. K. (1990). Functions, graphs, and graphing: Tasks, learning, and teaching. <i>Review of Educational Research, 60</i>(1), 1–64.</li><li>Lesh, R., Post, T., &amp; Behr, M. (1987). Representations and translations among representations in mathematics learning and problem solving. In C. Janvier (Ed.), <i>Problems of representation in the teaching and learning of mathematics</i> (pp. 33–40). Lawrence Erlbaum.</li><li>Lithner, J. (2008). A research framework for creative and imitative reasoning. <i>Educational Studies in Mathematics, 67</i>(3), 255–276.</li><li>Marton, F. (2015). <i>Necessary conditions of learning</i>. Routledge.</li><li>Mason, J. (1996). Expressing generality and roots of algebra. In N. Bednarz, C. Kieran, &amp; L. Lee (Eds.), <i>Approaches to algebra</i> (pp. 65–86). Kluwer.</li><li>Messick, S. (1995). Validity of psychological assessment. <i>American Psychologist, 50</i>(9), 741–749.</li><li>NCTM (2000). <i>Principles and standards for school mathematics</i>. NCTM.</li><li>OECD (2023). <i>PISA 2022 assessment and analytical framework</i>. OECD Publishing.</li><li>Prestage, S., &amp; Perks, P. (2001). <i>Adapting and extending secondary mathematics activities: New tasks for old</i>. David Fulton.</li><li>Silver, E. A. (1994). On mathematical problem posing. <i>For the Learning of Mathematics, 14</i>(1), 19–28.</li><li>Skemp, R. R. (1976). Relational understanding and instrumental understanding. <i>Mathematics Teaching, 77</i>, 20–26.</li><li>Stein, M. K., Grover, B. W., &amp; Henningsen, M. (1996). Building student capacity for mathematical thinking and reasoning: An analysis of mathematical tasks used in reform classrooms. <i>American Educational Research Journal, 33</i>(2), 455–488.</li><li>Stein, M. K., &amp; Smith, M. S. (1998). Mathematical tasks as a framework for reflection. <i>Mathematics Teaching in the Middle School, 3</i>(4), 268–275.</li><li>Sullivan, P., &amp; Lilburn, P. (2002). <i>Good questions for math teaching: Why ask them and what to ask, K–6</i>. Math Solutions.</li><li>Swan, M. (2005). <i>Improving learning in mathematics: Challenges and strategies</i>. DfES Standards Unit.</li><li>Verschaffel, L., Greer, B., &amp; De Corte, E. (2000). <i>Making sense of word problems</i>. Swets &amp; Zeitlinger.</li><li>Watson, A., &amp; Mason, J. (2005). <i>Mathematics as a constructive activity: Learners generating examples</i>. Lawrence Erlbaum.</li><li>Watson, A., &amp; Mason, J. (2006). Seeing an exercise as a single mathematical object: Using variation to structure sense-making. <i>Mathematical Thinking and Learning, 8</i>(2), 91–111.</li><li>Wiliam, D. (2011). <i>Embedded formative assessment</i>. Solution Tree.</li><li>교육부 (2022). <i>수학과 교육과정</i> (교육부 고시 제2022-33호 [별책 8]).</li></ol></details></div></div><div class="stnav"><button class="act stprev">← 이전 장면</button><span class="stdots"><i data-st="0" class=on></i><i data-st="1"></i><i data-st="2"></i><i data-st="3"></i><i data-st="4"></i><i data-st="5"></i><i data-st="6"></i><i data-st="7"></i><i data-st="8"></i><i data-st="9"></i></span><button class="act big stfwd">다음 장면 →</button></div></div><p class="meta wkey">← → 키로도 넘길 수 있어요</p><nav class="pager"><a class="pn" href="#home" data-go="home">← 시작하기</a><a class="pn nx" href="#lens" data-go="lens">다음 · 8렌즈 한눈에 →</a></nav></section><section class="panel" id="p-lens" data-tab="lens"><div class="ph"><span class="step">시작 · 03/15</span><h2>8렌즈 한눈에 — 한 문항이 여덟 문항이 된다</h2><p class="desc">렌즈를 하나씩 눌러 보세요. 같은 교과서 문항이 렌즈마다 어떤 시험 문항이 되는지 실제 결과(문항 + 그림)로 보여 줍니다.</p></div>
 <div class="setbar"><span>예시 문항</span><button class="setb on" data-set="A">부채꼴 · 도형</button><button class="setb" data-set="B">정비례·반비례 · 그래프와 도형</button></div>
 <div class="lensgrid"><aside class="before"><div class="bh">BEFORE · 교과서 문항</div><div class="bpane" data-set="A"><div class="bimg"><img src="img/items/08_p211.png" alt="교과서 문항"></div><p class="meta">교과서 p.211 중단원 6 · 정답 둘레 (3π+12) cm, 넓이 9π cm²</p></div><div class="bpane" data-set="B" hidden><div class="bimg"><img src="img/items/04_p135.png" alt="교과서 문항"></div><p class="meta">교과서 p.135 발전 6 · 정답 a = −1/4, b = −4</p></div><p class="bnote">이 한 문항을 렌즈만 바꿔 넣으면 →</p></aside>
 <section class="afterw"><div class="lbtns"><button class="lbtn on" data-lens="1" style="--c:#C0504D"><b>①</b><span>오류 진단</span><small>푸는 사람 → 판단하는 사람</small></button><button class="lbtn" data-lens="2" style="--c:#B26A00"><b>②</b><span>역으로·열린 답</span><small>푸는 사람 → 만드는 사람</small></button><button class="lbtn" data-lens="3" style="--c:#2F6FA8"><b>③</b><span>표현 바꾸기</span><small>한 표현 → 표현 사이</small></button><button class="lbtn" data-lens="4" style="--c:#2E7D6B"><b>④</b><span>조건 비틀기</span><small>조건을 바꿔 본다</small></button><button class="lbtn" data-lens="5" style="--c:#5B4B8A"><b>⑤</b><span>정보 판단</span><small>조건의 충분성을 판단</small></button><button class="lbtn" data-lens="6" style="--c:#8A5A2B"><b>⑥</b><span>일반화</span><small>특수 → 일반</small></button><button class="lbtn" data-lens="7" style="--c:#3E7C8C"><b>⑦</b><span>연결</span><small>한 단원 → 다른 영역</small></button><button class="lbtn" data-lens="8" style="--c:#9A3B5A"><b>⑧</b><span>고난도화</span><small>개념 하나 → 개념의 연결</small></button></div><div class="after"><div class="lpane" data-set="A" data-lens="1"><div class="lmeta" style="--c:#C0504D"><span class="qlens">① 오류 진단</span><p><b>이럴 때</b> 같은 실수가 반복될 때 · 풀이 검증력을 볼 때</p><p><b>학생에게 묻는 말</b> "처음 틀린 줄은 어디이고, 왜 틀렸나?"</p></div><article class="qcard" style="--c:#C0504D" id="q-A1">
@@ -1981,6 +2031,7 @@ function show(tag,scroll){
   if(scroll) window.scrollTo({top:0,behavior:'smooth'});
   if(tag==='make') syncMake();
 }
+document.addEventListener('click',e=>{const b=e.target.closest('.wlb');if(!b)return;const n=b.dataset.wl;document.querySelectorAll('.wlb').forEach(x=>x.classList.toggle('on',x===b));document.querySelectorAll('.wone .wcard').forEach(c=>c.hidden=c.dataset.wl!==n);});
 document.addEventListener('click',e=>{const g=e.target.closest('[data-lensgo]');if(g){setTimeout(()=>{setLens(+g.dataset.lensgo);const a=document.querySelector('#p-lens .lbtns');if(a)a.scrollIntoView({behavior:'smooth',block:'start'});},30);}});
 document.addEventListener('click',e=>{const g=e.target.closest('[data-go]');if(g){e.preventDefault();show(g.dataset.go,true);}});
 window.addEventListener('hashchange',()=>show(location.hash.slice(1),false));
@@ -1989,7 +2040,7 @@ function stGo(sp,i,push){const panes=sp.querySelectorAll('.stpane');const n=pane
   panes.forEach((p,k)=>p.classList.toggle('on',k===i));sp.querySelectorAll('.stt').forEach((b,k)=>{b.classList.toggle('on',k===i);b.classList.toggle('done',k<i);});
   sp.querySelectorAll('.stdots i').forEach((d,k)=>d.classList.toggle('on',k===i));sp.classList.toggle('last',i===n-1);sp.dataset.cur=i;
   const fwd=sp.querySelector('.stfwd');const pi=TABS.indexOf(sp.dataset.tab);
-  if(fwd){if(i===n-1&&pi>=0&&pi<TABS.length-1){fwd.textContent='다음 화면 →';fwd.dataset.next=TABS[pi+1];}else{fwd.textContent='다음 턴 →';delete fwd.dataset.next;}}
+  if(fwd){if(i===n-1&&pi>=0&&pi<TABS.length-1){fwd.textContent='다음 화면 →';fwd.dataset.next=TABS[pi+1];}else{fwd.textContent=sp.classList.contains('wdeck')?'다음 장면 →':'다음 턴 →';delete fwd.dataset.next;}}
   if(push!==false){const h='#'+sp.dataset.tab+(i?'-'+(i+1):'');if(location.hash!==h)history.replaceState(null,'',h);}}
 document.querySelectorAll('.stepper').forEach(sp=>{sp.dataset.cur=0;stGo(sp,0,false);
   sp.addEventListener('click',e=>{const t=e.target.closest('.stt,.stdots i');if(t){stGo(sp,+t.dataset.st);return;}
