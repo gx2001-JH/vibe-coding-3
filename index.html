@@ -1238,6 +1238,30 @@ body.hdtight .hdbtns .act{padding:8px 10px}
 #dkStage{overflow:auto}
 #dkStage .qfig svg,#dkStage .qfig img{max-height:27vh;width:auto;max-width:100%}
 #dkAside .dkbefore{font-size:16px}#dkAside .dkbefore .bnote{font-size:17px}
+
+/* 렌즈별 근거 카드: 이럴 때 · 묻는 말 · 왜 필요 · 무엇이 유용 */
+.wcard{max-width:1100px!important}
+.wuse{margin:10px 0 0;padding:10px 14px;border-radius:12px;background:color-mix(in srgb,var(--c) 7%,var(--card));border-left:4px solid var(--c);display:flex;flex-direction:column;gap:4px}
+.wuse p{margin:0;font-size:15.5px;line-height:1.55}
+.wuse b{color:var(--ink);margin-right:8px;font-weight:800}
+.wng{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0 0}
+.wneed,.wgain{border-radius:12px;padding:10px 14px;border:1px solid var(--line)}
+.wneed{background:#FBF1EE}
+.wgain{background:#EEF6F1}
+.wneed span,.wgain span{display:block;font-size:12.5px;font-weight:800;margin-bottom:4px}
+.wneed span{color:#B4472F}.wgain span{color:#2E7D6B}
+.wneed p,.wgain p{margin:0;font-size:15px;line-height:1.6}
+.wform small{display:block;font-size:11.5px;font-weight:800;color:var(--c);margin-bottom:2px}
+.wbasis{margin:0 0 6px}
+.wbasis>span{display:inline-block;font-size:12px;font-weight:800;color:var(--mute);margin-bottom:0}
+.wbasis .wwhy li{font-size:13.5px;line-height:1.55;margin:3px 0}
+@media (max-width:800px){.wng{grid-template-columns:1fr}}
+/* 8렌즈 한눈에: 렌즈 버튼은 작게 한 줄로 */
+#p-lens .lbtns{display:flex!important;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+#p-lens .lbtn{flex-direction:row!important;align-items:center;gap:5px;padding:6px 12px!important;border-radius:999px;flex:none}
+#p-lens .lbtn b{font-size:15px}
+#p-lens .lbtn span{font-size:14px}
+#p-lens .lbtn small{display:none}
 </style></head><body>
 <header class="top wrap"><div class="hl"><div class="brand"><button class="act navtog" title="왼쪽 메뉴 펼치기/접기"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button><svg viewBox="0 0 100 100" aria-hidden="true"><g fill="#D97757"><rect x="46" y="8" width="8" height="38" rx="4" transform="rotate(0 50 50)"/><rect x="46" y="8" width="8" height="38" rx="4" transform="rotate(45 50 50)"/><rect x="46" y="8" width="8" height="38" rx="4" transform="rotate(90 50 50)"/><rect x="46" y="8" width="8" height="38" rx="4" transform="rotate(135 50 50)"/><rect x="46" y="8" width="8" height="38" rx="4" transform="rotate(180 50 50)"/><rect x="46" y="8" width="8" height="38" rx="4" transform="rotate(225 50 50)"/><rect x="46" y="8" width="8" height="38" rx="4" transform="rotate(270 50 50)"/><rect x="46" y="8" width="8" height="38" rx="4" transform="rotate(315 50 50)"/></g></svg><h1>교과서 문항 하나로 좋은 평가 문항 만들기 <span class="sub2">(8렌즈 · 한글 · 도형)</span></h1></div>
 <p class="lead">바이브 코딩 3편 — 이 사이트 하나로 8렌즈 · 프롬프트 · 한글 변환 · 도형까지 진행합니다.</p></div><div class="hdbtns"><button class="act pri topfull" title="지금 화면을 한 화면에 크게 (F)"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"/></svg> 크게 보기</button><div class="motto">✳ "렌즈는 AI가 돌리고, 판단은 교사가 한다."</div><a class="act" href="#prompts" data-go="prompts" title="프롬프트 전체"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg><span class="hbl">프롬프트 전체</span></a><a class="act" href="#links" data-go="links" title="오늘 쓰는 사이트"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="hbl">사이트 전체</span></a><button class="act helpbtn hdemo" data-demo="all" title="실제 시연 화면"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg><span class="hbl">시연 화면</span></button><span class="ylslot yl"></span></div></header>
@@ -1339,59 +1363,75 @@ body.hdtight .hdbtns .act{padding:8px 10px}
 <div class="wtwo"><div class="no"><span>준호 · 외운 학생</span><p>"맞다. 직선이 가파르면 삼각형이 좁아지니까 넓이가 작아진다." ✘<br><small>그림의 인상으로 답합니다. 장면 1에서는 만점이었습니다.</small></p></div>
 <div class="ok"><span>민서 · 이해한 학생</span><p>"아니다. 선분 PQ가 원점을 지나서 삼각형은 밑변 OC = 6인 두 삼각형으로 나뉜다. 높이는 P, Q의 y좌표 1로 그대로이니 넓이는 6 × 1 = 6, <b>변하지 않는다</b>." ✔</p></div></div>
 <div class="wtake"><span>한 줄 정리</span><p>렌즈 문항의 점수는 <b>"넓이를 무엇이 정하는지 설명할 수 있는가"</b>를 잽니다. 오답 "작아진다"는 <b>"그림의 인상으로 판단한다"</b>는 오개념의 이름표가 됩니다.</p></div>
-<p class="wsrc">근거 · Messick(1995) 타당도 — 재려는 것만 재야 점수 해석이 정당하다 · Black &amp; Wiliam(1998) 형성평가 · 2022 개정 교육과정 교과 역량 평가</p></div><div class="stpane wsl" data-st="10"><div class="wsk">장면 11 · 렌즈 하나씩</div><h3 class="wst">렌즈를 눌러 <em>근거와 답안에 남는 것</em>을 확인하세요</h3><div class="wlbs"><button class="wlb on" data-wl="1" style="--c:#C0504D">① 오류 진단</button><button class="wlb" data-wl="2" style="--c:#B26A00">② 역으로·열린 답</button><button class="wlb" data-wl="3" style="--c:#2F6FA8">③ 표현 바꾸기</button><button class="wlb" data-wl="4" style="--c:#2E7D6B">④ 조건 비틀기</button><button class="wlb" data-wl="5" style="--c:#5B4B8A">⑤ 정보 판단</button><button class="wlb" data-wl="6" style="--c:#8A5A2B">⑥ 일반화</button><button class="wlb" data-wl="7" style="--c:#3E7C8C">⑦ 연결</button><button class="wlb" data-wl="8" style="--c:#9A3B5A">⑧ 고난도화</button></div><div class="wone"><article class="wcard" data-wl="1" style="--c:#C0504D">
+<p class="wsrc">근거 · Messick(1995) 타당도 — 재려는 것만 재야 점수 해석이 정당하다 · Black &amp; Wiliam(1998) 형성평가 · 2022 개정 교육과정 교과 역량 평가</p></div><div class="stpane wsl" data-st="10"><div class="wsk">장면 11 · 렌즈 하나씩</div><h3 class="wst">렌즈마다 <em>언제 쓰고, 왜 필요하고, 무엇을 얻나</em></h3><div class="wint"><span>이 장면에서 볼 것</span><p>렌즈를 하나씩 눌러 보세요. <b>이럴 때 · 학생에게 묻는 말</b> → <b>지금 시험의 빈틈</b> → <b>교사가 얻는 것</b> 순서로 읽으면 됩니다.</p></div><div class="wlbs"><button class="wlb on" data-wl="1" style="--c:#C0504D">① 오류 진단</button><button class="wlb" data-wl="2" style="--c:#B26A00">② 역으로·열린 답</button><button class="wlb" data-wl="3" style="--c:#2F6FA8">③ 표현 바꾸기</button><button class="wlb" data-wl="4" style="--c:#2E7D6B">④ 조건 비틀기</button><button class="wlb" data-wl="5" style="--c:#5B4B8A">⑤ 정보 판단</button><button class="wlb" data-wl="6" style="--c:#8A5A2B">⑥ 일반화</button><button class="wlb" data-wl="7" style="--c:#3E7C8C">⑦ 연결</button><button class="wlb" data-wl="8" style="--c:#9A3B5A">⑧ 고난도화</button></div><div class="wone"><article class="wcard" data-wl="1" style="--c:#C0504D">
 <header><b>①</b><div><h4>오류 진단</h4><small>푸는 사람 → 판단하는 사람</small></div></header>
-<p class="wform">"○○의 풀이가 옳은지 판단하고, 처음 틀린 줄을 찾아 고치시오."</p>
-<ul class="wwhy"><li>오류가 섞인 풀이를 찾아 고치게 하면 <b>원리 이해와 먼 전이</b>가 향상되었다 <cite>Große &amp; Renkl, 2007</cite></li><li>틀린 예와 옳은 예를 <b>비교한</b> 학생이 옳은 예만 본 학생보다 개념을 더 잘 익히고, 설명에서 오개념을 더 자주 짚었다 <cite>Durkin &amp; Rittle-Johnson, 2012</cite></li></ul>
+<div class="wuse"><p><b>이럴 때</b>같은 실수가 반복될 때 · 풀이 검증력을 볼 때</p><p><b>학생에게 묻는 말</b>"처음 틀린 줄은 어디이고, 왜 틀렸나?"</p></div>
+<div class="wng"><div class="wneed"><span>왜 필요한가 · 지금 시험의 빈틈</span><p>계산 문항에는 정답과 오답만 남습니다. 공식을 이해했는지, 순서만 외웠는지는 답으로 알 수 없습니다. 그래서 <b>같은 실수가 해마다 반복</b>됩니다.</p></div><div class="wgain"><span>무엇이 유용한가 · 교사가 얻는 것</span><p>학생이 짚은 <b>"처음 틀린 줄"이 곧 오개념 진단표</b>가 됩니다. 다시 가르칠 내용이 바로 보이고, 그 실수는 5지선다 오답 보기로 그대로 쓸 수 있습니다.</p></div></div>
+<p class="wform"><small>질문 공식</small>"○○의 풀이가 옳은지 판단하고, 처음 틀린 줄을 찾아 고치시오."</p>
+<div class="wbasis"><span>연구 근거</span><ul class="wwhy"><li>오류가 섞인 풀이를 찾아 고치게 하면 <b>원리 이해와 먼 전이</b>가 향상되었다 <cite>Große &amp; Renkl, 2007</cite></li><li>틀린 예와 옳은 예를 <b>비교한</b> 학생이 옳은 예만 본 학생보다 개념을 더 잘 익히고, 설명에서 오개념을 더 자주 짚었다 <cite>Durkin &amp; Rittle-Johnson, 2012</cite></li></ul></div>
 <div class="wev"><span>답안에 남는 것</span><p>틀린 줄과 그 이유 → 규칙을 <b>왜</b> 쓰는지 알고 있는가</p></div>
 <div class="wfoot"><span class="wcomp">역량 · 추론 · 의사소통</span><span class="wcog">연결 없는 절차 <i>→</i> <b>연결 있는 절차</b></span>
 <a class="wgo" href="#lens" data-go="lens" data-lensgo="1">예시 문항 보기 →</a></div>
 </article><article class="wcard" data-wl="2" style="--c:#B26A00" hidden>
 <header><b>②</b><div><h4>역으로·열린 답</h4><small>푸는 사람 → 만드는 사람</small></div></header>
-<p class="wform">"답이 ○○이 되도록 조건을 만드시오." / "가능한 것을 모두 찾으시오."</p>
-<ul class="wwhy"><li>학생에게 조건을 만족하는 예를 <b>스스로 만들게</b> 하면 그 학생이 떠올릴 수 있는 "예의 공간"이 드러나고 넓어진다 <cite>Watson &amp; Mason, 2005</cite></li><li>문제 만들기는 문제 해결과 함께 수학적 사고의 핵심 활동이다 <cite>Silver, 1994</cite> · 답이 여럿인 "좋은 질문"과 열린 접근 <cite>Sullivan &amp; Lilburn, 2002; Becker &amp; Shimada, 1997</cite></li></ul>
+<div class="wuse"><p><b>이럴 때</b>공식 대입만 하는 학생을 가려낼 때</p><p><b>학생에게 묻는 말</b>"답이 ○○이 되게 만들어라 / 모두 찾아라"</p></div>
+<div class="wng"><div class="wneed"><span>왜 필요한가 · 지금 시험의 빈틈</span><p>"넓이를 구하시오"는 공식에 수를 넣으면 끝납니다. <b>공식만 외운 학생과 정의를 아는 학생이 같은 점수</b>를 받습니다.</p></div><div class="wgain"><span>무엇이 유용한가 · 교사가 얻는 것</span><p>결과를 주고 조건을 찾게 하면 <b>정의를 조건으로 쓰는 힘과 빠짐없이 경우를 나누는 습관</b>이 드러납니다. "모두 찾기"는 찾은 개수로 채점 기준이 분명합니다.</p></div></div>
+<p class="wform"><small>질문 공식</small>"답이 ○○이 되도록 조건을 만드시오." / "가능한 것을 모두 찾으시오."</p>
+<div class="wbasis"><span>연구 근거</span><ul class="wwhy"><li>학생에게 조건을 만족하는 예를 <b>스스로 만들게</b> 하면 그 학생이 떠올릴 수 있는 "예의 공간"이 드러나고 넓어진다 <cite>Watson &amp; Mason, 2005</cite></li><li>문제 만들기는 문제 해결과 함께 수학적 사고의 핵심 활동이다 <cite>Silver, 1994</cite> · 답이 여럿인 "좋은 질문"과 열린 접근 <cite>Sullivan &amp; Lilburn, 2002; Becker &amp; Shimada, 1997</cite></li></ul></div>
 <div class="wev"><span>답안에 남는 것</span><p>정의를 <b>조건으로</b> 쓰는 힘, 빠짐없이 경우를 나누는 추론</p></div>
 <div class="wfoot"><span class="wcomp">역량 · 문제해결 · 추론</span><span class="wcog">연결 없는 절차 <i>→</i> <b>수학 하기</b></span>
 <a class="wgo" href="#lens" data-go="lens" data-lensgo="2">예시 문항 보기 →</a></div>
 </article><article class="wcard" data-wl="3" style="--c:#2F6FA8" hidden>
 <header><b>③</b><div><h4>표현 바꾸기</h4><small>한 표현 → 표현 사이</small></div></header>
-<p class="wform">식 · 표 · 그래프 · 그림 · 말 사이를 옮기거나, 다른 표현을 해석하게 한다.</p>
-<ul class="wwhy"><li>수학적 대상은 표현으로만 다룰 수 있기에, 한 표현에서 다른 표현으로 옮기는 <b>"전환"</b>이 이해의 관문이자 가장 큰 어려움이다 <cite>Duval, 2006</cite></li><li>상황 · 그림 · 말 · 기호 사이의 번역 능력이 개념 이해의 핵심 지표다 <cite>Lesh, Post &amp; Behr, 1987</cite> · 학생들은 그래프를 상황의 <b>그림</b>처럼 읽는 오개념을 흔히 가진다 <cite>Leinhardt 외, 1990; Clement, 1989</cite></li></ul>
+<div class="wuse"><p><b>이럴 때</b>식은 풀지만 다른 표현으로 설명하지 못할 때</p><p><b>학생에게 묻는 말</b>"식·표·그래프·그림·말로 옮기고 해석하라"</p></div>
+<div class="wng"><div class="wneed"><span>왜 필요한가 · 지금 시험의 빈틈</span><p>학생은 식은 풀지만 그래프를 <b>모양 그림처럼</b> 읽습니다. 한 가지 표현 안에서만 묻는 문항은 이 빈틈을 보지 못합니다.</p></div><div class="wgain"><span>무엇이 유용한가 · 교사가 얻는 것</span><p>식·표·그래프 사이를 옮기게 하는 순간 <b>이해의 관문(전환)</b>을 통과했는지 확인됩니다. 같은 내용을 다른 모양으로 묻기만 하면 되니 만들기도 쉽습니다.</p></div></div>
+<p class="wform"><small>질문 공식</small>식 · 표 · 그래프 · 그림 · 말 사이를 옮기거나, 다른 표현을 해석하게 한다.</p>
+<div class="wbasis"><span>연구 근거</span><ul class="wwhy"><li>수학적 대상은 표현으로만 다룰 수 있기에, 한 표현에서 다른 표현으로 옮기는 <b>"전환"</b>이 이해의 관문이자 가장 큰 어려움이다 <cite>Duval, 2006</cite></li><li>상황 · 그림 · 말 · 기호 사이의 번역 능력이 개념 이해의 핵심 지표다 <cite>Lesh, Post &amp; Behr, 1987</cite> · 학생들은 그래프를 상황의 <b>그림</b>처럼 읽는 오개념을 흔히 가진다 <cite>Leinhardt 외, 1990; Clement, 1989</cite></li></ul></div>
 <div class="wev"><span>답안에 남는 것</span><p>표현 사이의 <b>전환</b>, 그래프 · 표를 해석하는 힘</p></div>
 <div class="wfoot"><span class="wcomp">역량 · 의사소통 · 정보처리</span><span class="wcog">암기 · 읽기 <i>→</i> <b>연결 있는 절차</b></span>
 <a class="wgo" href="#lens" data-go="lens" data-lensgo="3">예시 문항 보기 →</a></div>
 </article><article class="wcard" data-wl="4" style="--c:#2E7D6B" hidden>
 <header><b>④</b><div><h4>조건 비틀기</h4><small>조건을 바꿔 본다</small></div></header>
-<p class="wform">"조건 하나만 바꾸면 어떻게 되는가? 경계에서는? 왜 안 되는가?"</p>
-<ul class="wwhy"><li>조건을 하나씩 나열하고 <b>"이 조건이 아니라면?"</b>을 물으면 조건이 결과에 하는 역할이 드러난다 <cite>Brown &amp; Walter, 2005</cite></li><li>학습자는 한 측면이 <b>변하고 나머지가 고정될 때</b> 비로소 그 측면을 알아차린다 — 변이 이론 <cite>Marton, 2015; Watson &amp; Mason, 2006</cite></li></ul>
+<div class="wuse"><p><b>이럴 때</b>조건과 결과의 관계를 아는지 볼 때</p><p><b>학생에게 묻는 말</b>"이 조건 하나만 바꾸면? 경계는? 반례는?"</p></div>
+<div class="wng"><div class="wneed"><span>왜 필요한가 · 지금 시험의 빈틈</span><p>조건이 딱 맞게 주어지면 학생은 조건이 왜 있는지 생각하지 않습니다. <b>"a ≠ 0"이 왜 붙었는지 몰라도</b> 맞힙니다.</p></div><div class="wgain"><span>무엇이 유용한가 · 교사가 얻는 것</span><p>"이 조건 하나만 바꾸면?"으로 <b>조건과 결과의 관계 · 경계 · 반례</b>를 아는지 보입니다. 한 문항에서 소문항을 여러 개 뽑을 수 있어 서술형 세트로 좋습니다.</p></div></div>
+<p class="wform"><small>질문 공식</small>"조건 하나만 바꾸면 어떻게 되는가? 경계에서는? 왜 안 되는가?"</p>
+<div class="wbasis"><span>연구 근거</span><ul class="wwhy"><li>조건을 하나씩 나열하고 <b>"이 조건이 아니라면?"</b>을 물으면 조건이 결과에 하는 역할이 드러난다 <cite>Brown &amp; Walter, 2005</cite></li><li>학습자는 한 측면이 <b>변하고 나머지가 고정될 때</b> 비로소 그 측면을 알아차린다 — 변이 이론 <cite>Marton, 2015; Watson &amp; Mason, 2006</cite></li></ul></div>
 <div class="wev"><span>답안에 남는 것</span><p>조건과 결과의 <b>관계</b>, 경계와 반례</p></div>
 <div class="wfoot"><span class="wcomp">역량 · 추론</span><span class="wcog">연결 없는 절차 <i>→</i> <b>연결 있는 절차</b></span>
 <a class="wgo" href="#lens" data-go="lens" data-lensgo="4">예시 문항 보기 →</a></div>
 </article><article class="wcard" data-wl="5" style="--c:#5B4B8A" hidden>
 <header><b>⑤</b><div><h4>정보 판단</h4><small>조건의 충분성을 판단</small></div></header>
-<p class="wform">"이 정보만으로 정해지는가? 무엇이 더 필요한가? 빼도 되는 것은?"</p>
-<ul class="wwhy"><li>학생들은 답할 수 없는 문제("선장의 나이")에도 주어진 수를 조합해 답을 낸다 — <b>의미 판단의 정지</b>. 필요한 정보만 정확히 주는 문항은 이 습관을 측정하지 못한다 <cite>Verschaffel, Greer &amp; De Corte, 2000</cite></li><li>상황에서 필요한 정보를 가려 수학 문제로 만드는 <b>"정식화하기"</b>가 수학적 소양의 핵심 과정이다 <cite>OECD PISA 2022</cite> · 정보를 빼거나 더하는 개작 <cite>Prestage &amp; Perks, 2001</cite></li></ul>
+<div class="wuse"><p><b>이럴 때</b>필요한 정보를 가려내는지 볼 때</p><p><b>학생에게 묻는 말</b>"이것만으로 답이 하나로 정해지나?"</p></div>
+<div class="wng"><div class="wneed"><span>왜 필요한가 · 지금 시험의 빈틈</span><p>학생은 답할 수 없는 문제에도 <b>주어진 수를 모두 조합해</b> 답을 냅니다(선장의 나이). 필요한 정보만 딱 주는 문항은 이 습관을 드러내지 못합니다.</p></div><div class="wgain"><span>무엇이 유용한가 · 교사가 얻는 것</span><p>정보를 빼거나 더해 "답이 정해지는가?"를 물으면 <b>문제를 읽고 판단하는 힘</b>을 잴 수 있습니다. 실생활 · PISA형 문항으로 바로 이어집니다.</p></div></div>
+<p class="wform"><small>질문 공식</small>"이 정보만으로 정해지는가? 무엇이 더 필요한가? 빼도 되는 것은?"</p>
+<div class="wbasis"><span>연구 근거</span><ul class="wwhy"><li>학생들은 답할 수 없는 문제("선장의 나이")에도 주어진 수를 조합해 답을 낸다 — <b>의미 판단의 정지</b>. 필요한 정보만 정확히 주는 문항은 이 습관을 측정하지 못한다 <cite>Verschaffel, Greer &amp; De Corte, 2000</cite></li><li>상황에서 필요한 정보를 가려 수학 문제로 만드는 <b>"정식화하기"</b>가 수학적 소양의 핵심 과정이다 <cite>OECD PISA 2022</cite> · 정보를 빼거나 더하는 개작 <cite>Prestage &amp; Perks, 2001</cite></li></ul></div>
 <div class="wev"><span>답안에 남는 것</span><p>정보가 <b>부족 · 충분 · 모순</b>인지 가려내는 판단</p></div>
 <div class="wfoot"><span class="wcomp">역량 · 정보처리 · 문제해결</span><span class="wcog">연결 없는 절차 <i>→</i> <b>연결 있는 절차</b></span>
 <a class="wgo" href="#lens" data-go="lens" data-lensgo="5">예시 문항 보기 →</a></div>
 </article><article class="wcard" data-wl="6" style="--c:#8A5A2B" hidden>
 <header><b>⑥</b><div><h4>일반화</h4><small>특수 → 일반</small></div></header>
-<p class="wform">"항상 성립하는가? 그 이유는? 몇 개의 예로 충분한가?"</p>
-<ul class="wwhy"><li>일반성을 보고 표현하는 일이 <b>대수적 사고의 뿌리</b>다 <cite>Mason, 1996</cite></li><li>14~15세 약 2,500명 조사에서, 학생들은 예 몇 개로 확인한 것이 증명이 아님을 알면서도 <b>스스로는 예에 기대어</b> 논증했다 <cite>Healy &amp; Hoyles, 2000</cite> · "항상 · 가끔 · 절대 참" 진술 평가 <cite>Swan, 2005</cite></li></ul>
+<div class="wuse"><p><b>이럴 때</b>공식의 이유·정당화를 볼 때 · 상위권 변별</p><p><b>학생에게 묻는 말</b>"항상 그런가? 왜 그런가?"</p></div>
+<div class="wng"><div class="wneed"><span>왜 필요한가 · 지금 시험의 빈틈</span><p>예 몇 개로 확인하고 <b>"증명했다"고 여기는 학생</b>이 많습니다. 특정한 수로만 묻는 문항은 이 차이를 보지 못합니다.</p></div><div class="wgain"><span>무엇이 유용한가 · 교사가 얻는 것</span><p>수를 문자로 바꾸면 "왜 항상 그런가"를 설명해야 하므로 <b>추측과 정당화를 구별</b>하는지 보입니다. 상위권 변별 문항으로 특히 쓸모 있습니다.</p></div></div>
+<p class="wform"><small>질문 공식</small>"항상 성립하는가? 그 이유는? 몇 개의 예로 충분한가?"</p>
+<div class="wbasis"><span>연구 근거</span><ul class="wwhy"><li>일반성을 보고 표현하는 일이 <b>대수적 사고의 뿌리</b>다 <cite>Mason, 1996</cite></li><li>14~15세 약 2,500명 조사에서, 학생들은 예 몇 개로 확인한 것이 증명이 아님을 알면서도 <b>스스로는 예에 기대어</b> 논증했다 <cite>Healy &amp; Hoyles, 2000</cite> · "항상 · 가끔 · 절대 참" 진술 평가 <cite>Swan, 2005</cite></li></ul></div>
 <div class="wev"><span>답안에 남는 것</span><p>추측과 <b>정당화</b>의 구별, 공식이 나오는 구조</p></div>
 <div class="wfoot"><span class="wcomp">역량 · 추론</span><span class="wcog">암기 <i>→</i> <b>수학 하기</b></span>
 <a class="wgo" href="#lens" data-go="lens" data-lensgo="6">예시 문항 보기 →</a></div>
 </article><article class="wcard" data-wl="7" style="--c:#3E7C8C" hidden>
 <header><b>⑦</b><div><h4>연결</h4><small>한 단원 → 다른 영역</small></div></header>
-<p class="wform">같은 수학적 관계를 다른 단원 · 다른 영역 · 생활 장면에서 알아보게 한다.</p>
-<ul class="wwhy"><li>수학적 이해는 지식이 <b>연결망 속에 얼마나 많이, 강하게 연결</b>되어 있는가로 설명된다 <cite>Hiebert &amp; Carpenter, 1992</cite></li><li>"어떻게"만 아는 도구적 이해와 "왜"까지 아는 <b>관계적 이해</b>는 낯선 상황에서 갈린다 <cite>Skemp, 1976</cite> · 연결 규준 <cite>NCTM, 2000</cite> · 2022 개정 교육과정 "연결" 역량</li></ul>
+<div class="wuse"><p><b>이럴 때</b>단원 정리 · 다른 단원·생활과 이을 때</p><p><b>학생에게 묻는 말</b>"다른 곳에서 같은 관계를 찾아 써라"</p></div>
+<div class="wng"><div class="wneed"><span>왜 필요한가 · 지금 시험의 빈틈</span><p>단원별로 따로 배운 지식은 <b>단원 이름이 바뀌면 꺼내 쓰지 못합니다</b>. 단원 안에서만 묻는 문항으로는 이것을 확인할 수 없습니다.</p></div><div class="wgain"><span>무엇이 유용한가 · 교사가 얻는 것</span><p>같은 관계(반비례 = 넓이가 일정한 직사각형)를 다른 단원 · 생활에서 쓰게 하면 <b>처음 보는 맥락에서 개념을 알아보는지</b> 확인됩니다. 단원 정리 · 수행평가 주제로 바로 씁니다.</p></div></div>
+<p class="wform"><small>질문 공식</small>같은 수학적 관계를 다른 단원 · 다른 영역 · 생활 장면에서 알아보게 한다.</p>
+<div class="wbasis"><span>연구 근거</span><ul class="wwhy"><li>수학적 이해는 지식이 <b>연결망 속에 얼마나 많이, 강하게 연결</b>되어 있는가로 설명된다 <cite>Hiebert &amp; Carpenter, 1992</cite></li><li>"어떻게"만 아는 도구적 이해와 "왜"까지 아는 <b>관계적 이해</b>는 낯선 상황에서 갈린다 <cite>Skemp, 1976</cite> · 연결 규준 <cite>NCTM, 2000</cite> · 2022 개정 교육과정 "연결" 역량</li></ul></div>
 <div class="wev"><span>답안에 남는 것</span><p>처음 보는 맥락에서 <b>같은 관계</b>를 알아보는 힘</p></div>
 <div class="wfoot"><span class="wcomp">역량 · 연결</span><span class="wcog">연결 없는 절차 <i>→</i> <b>연결 있는 절차</b></span>
 <a class="wgo" href="#lens" data-go="lens" data-lensgo="7">예시 문항 보기 →</a></div>
 </article><article class="wcard" data-wl="8" style="--c:#9A3B5A" hidden>
 <header><b>⑧</b><div><h4>고난도화</h4><small>개념 하나 → 개념의 연결</small></div></header>
-<p class="wform">개념 2~3개를 잇고, 숨은 관계를 찾아야 풀리게 하고, "왜"를 묻는 서술형을 붙인다.</p>
-<ul class="wwhy"><li>정해진 경로가 없고 개념 사이의 관계를 탐구하는 <b>"수학 하기"</b> 수준의 과제에서 고차적 사고가 가장 많이 일어났다 <cite>Stein, Grover &amp; Henningsen, 1996</cite></li><li>익숙한 유형은 외운 풀이로(모방 추론) 풀리고, 낯선 문항이어야 근거를 세우는 <b>창의적 추론</b>이 측정된다 <cite>Lithner, 2008; Boesen, Lithner &amp; Palm, 2010</cite></li></ul>
+<div class="wuse"><p><b>이럴 때</b>변별용 서술형 · 수행평가 대표 문항</p><p><b>학생에게 묻는 말</b>"개념 2~3개를 잇고 '왜'를 설명하라"</p></div>
+<div class="wng"><div class="wneed"><span>왜 필요한가 · 지금 시험의 빈틈</span><p>어려운 문항을 <b>계산량</b>으로 만들면 실수가 변별되고, 익숙한 유형을 꼬면 외운 풀이로 풀립니다. 둘 다 생각하는 힘을 변별하지 못합니다.</p></div><div class="wgain"><span>무엇이 유용한가 · 교사가 얻는 것</span><p>개념 2~3개를 잇고 "왜"를 묻는 소문항을 붙이면 <b>생각의 단계로 난이도</b>가 올라갑니다. 소문항별 부분 점수로 채점 기준이 분명해져 서술형의 객관도도 지킵니다.</p></div></div>
+<p class="wform"><small>질문 공식</small>개념 2~3개를 잇고, 숨은 관계를 찾아야 풀리게 하고, "왜"를 묻는 서술형을 붙인다.</p>
+<div class="wbasis"><span>연구 근거</span><ul class="wwhy"><li>정해진 경로가 없고 개념 사이의 관계를 탐구하는 <b>"수학 하기"</b> 수준의 과제에서 고차적 사고가 가장 많이 일어났다 <cite>Stein, Grover &amp; Henningsen, 1996</cite></li><li>익숙한 유형은 외운 풀이로(모방 추론) 풀리고, 낯선 문항이어야 근거를 세우는 <b>창의적 추론</b>이 측정된다 <cite>Lithner, 2008; Boesen, Lithner &amp; Palm, 2010</cite></li></ul></div>
 <div class="wev"><span>답안에 남는 것</span><p>숨은 관계의 <b>발견</b>, 모방이 아닌 추론</p></div>
 <div class="wfoot"><span class="wcomp">역량 · 문제해결 · 연결</span><span class="wcog">연결 없는 절차 <i>→</i> <b>수학 하기</b></span>
 <a class="wgo" href="#lens" data-go="lens" data-lensgo="8">예시 문항 보기 →</a></div>
