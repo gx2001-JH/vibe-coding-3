@@ -2892,6 +2892,14 @@ function fsPlace(){document.querySelectorAll('.fssec').forEach(x=>x.remove());co
   if(!$('#deckOv').hidden){const h=$('#deckOv .dkhead');if(h)h.prepend(mk());}}
 document.addEventListener('click',e=>{if(e.target.closest('.fssec')){fsList();$('#fsNav').classList.add('on');$('#fsDim').classList.add('on');}});
 {const _p=present;present=function(a,b){_p(a,b);fsPlace();};const _o=dkOpen;dkOpen=function(...a){_o(...a);fsPlace();};const _c=dkClose;dkClose=function(){_c();fsPlace();};}
+
+// 수업 따라가기: 크게 보기는 학생(사용자) 것 — 강사 화면이 바뀌어도 풀리지 않게
+window.ylGo=function(pos){if(typeof TABS!=='undefined'&&!TABS.includes(pos.tab))return;const h=pos.tab+(pos.turn>1?'-'+pos.turn:'');
+  const psp=document.querySelector('.stepper.present'),dk=!$('#deckOv').hidden,was=!!psp||dk;const cur=(document.querySelector('.panel.on')||{dataset:{}}).dataset.tab;
+  if(was&&pos.tab!==cur){fsNavClose();if(psp){psp.classList.remove('present');const bt=psp.querySelector('.stfull');if(bt)bt.innerHTML='<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"/></svg> 크게 보기';fitPane(psp);}
+    if(dk){$('#deckOv').hidden=true;$('#dkStage').innerHTML='';}
+    show(h,false);const pn=document.querySelector('.panel.on');if(pn){const sp=pn.querySelector('.stepper');if(sp)stGo(sp,Math.max(0,(pos.turn||1)-1),false);panelFull(pn);}return;}
+  show(h,!was);if(pos.turn===1){const sp=document.querySelector('#p-'+pos.tab+' .stepper');if(sp)stGo(sp,0);}};
 </script>
 <!--YL--><style>.yl *{box-sizing:border-box}
 .yl{--ya:var(--accent,#C96442);--yc:var(--card,#fff);--yi:var(--ink,#1F1E1D);--ym:var(--mute,#7A746C);--yl:var(--line,#E5DED2);--ys:var(--soft,#F6E6DD);--yg:#2F8A5E;--yr:#C9503D;font-family:inherit}
@@ -2991,7 +2999,7 @@ body.yl-has-bar{padding-bottom:96px}
 @media (min-width:1000px) and (max-width:1700px){body.yl-tp-open .stpane.stp2,body.yl-tp-open .stpane.stp2.wide{grid-template-columns:1fr}}
 </style><script>window.YL_ADAPTER={server:'https://yeonsu-live.gx2001.workers.dev',site:'v3',unit:'TURN',
  getPos(){const p=document.querySelector('.panel.on');if(!p)return null;const sp=p.querySelector('.stepper');return{tab:p.dataset.tab,turn:sp?(+sp.dataset.cur||0)+1:0};},
- goPos(pos){if(typeof TABS!=='undefined'&&!TABS.includes(pos.tab))return;show(pos.tab+(pos.turn>1?'-'+pos.turn:''),true);if(pos.turn===1){const sp=document.querySelector('#p-'+pos.tab+' .stepper');if(sp)stGo(sp,0);}},
+ goPos(pos){if(window.ylGo)return window.ylGo(pos);if(typeof TABS!=='undefined'&&!TABS.includes(pos.tab))return;show(pos.tab+(pos.turn>1?'-'+pos.turn:''),true);if(pos.turn===1){const sp=document.querySelector('#p-'+pos.tab+' .stepper');if(sp)stGo(sp,0);}},
  label(pos){if(!pos)return'';const b=document.querySelector('.tab[data-go="'+pos.tab+'"]');const t=b?b.textContent.replace(/^\s*\d+/,'').trim():pos.tab;return t+(pos.turn?' · TURN '+pos.turn:'');}};
 </script><script>/* 연수 실시간 수업 — 수업 코드 · 따라오기 · 부르기 · 잠금 · 공지 · 손들기 · 완료 현황
    사이트마다 window.YL_ADAPTER = {server, site, getPos(), goPos(pos), label(pos), unit} 을 먼저 정의한다. */
