@@ -1121,8 +1121,8 @@ header.top .topfull{font-weight:800}
 }
 @media (min-width:1600px){header.top .motto{display:block}}
 /* 수업 참여 버튼: 오른쪽 위로 옮겨 아래쪽 이동 버튼을 가리지 않게 */
-.stepper.present .stbar{margin-right:118px;grid-template-columns:auto repeat(var(--n),minmax(0,1fr))}
-.dkhead{padding-right:130px;padding-left:0}
+.stepper.present .stbar{margin-right:0;grid-template-columns:auto repeat(var(--n),minmax(0,1fr)) auto}
+.dkhead{padding-right:0;padding-left:0}
 /* 한 화면 맞춤 (fitall) */
 body.fitall{overflow:hidden}
 body.fitall .layout{height:calc(100vh - var(--hdh,64px))}
@@ -1269,6 +1269,11 @@ body.hdtight .hdbtns .act{padding:8px 10px}
 .stepper.present .stnav{display:none!important}
 #deckOv .dknav{display:none!important}
 .wkey{display:none!important}
+
+/* 축소도 막대 안의 한 칸 (떠 있는 버튼 없음) */
+#fsCtl{display:none!important}
+.fssec.fsx{border-right:0;border-left:1px solid var(--line)}
+.dkhead .fssec.fsx{margin:-10px 0 -10px auto}
 </style></head><body>
 <header class="top wrap"><div class="hl"><div class="brand"><button class="act navtog" title="왼쪽 메뉴 펼치기/접기"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button><svg viewBox="0 0 100 100" aria-hidden="true"><g fill="#D97757"><rect x="46" y="8" width="8" height="38" rx="4" transform="rotate(0 50 50)"/><rect x="46" y="8" width="8" height="38" rx="4" transform="rotate(45 50 50)"/><rect x="46" y="8" width="8" height="38" rx="4" transform="rotate(90 50 50)"/><rect x="46" y="8" width="8" height="38" rx="4" transform="rotate(135 50 50)"/><rect x="46" y="8" width="8" height="38" rx="4" transform="rotate(180 50 50)"/><rect x="46" y="8" width="8" height="38" rx="4" transform="rotate(225 50 50)"/><rect x="46" y="8" width="8" height="38" rx="4" transform="rotate(270 50 50)"/><rect x="46" y="8" width="8" height="38" rx="4" transform="rotate(315 50 50)"/></g></svg><h1>교과서 문항 하나로 좋은 평가 문항 만들기 <span class="sub2">(8렌즈 · 한글 · 도형)</span></h1></div>
 <p class="lead">바이브 코딩 3편 — 이 사이트 하나로 8렌즈 · 프롬프트 · 한글 변환 · 도형까지 진행합니다.</p></div><div class="hdbtns"><button class="act pri topfull" title="지금 화면을 한 화면에 크게 (F)"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"/></svg> 크게 보기</button><div class="motto">✳ "렌즈는 AI가 돌리고, 판단은 교사가 한다."</div><a class="act" href="#prompts" data-go="prompts" title="프롬프트 전체"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg><span class="hbl">프롬프트 전체</span></a><a class="act" href="#links" data-go="links" title="오늘 쓰는 사이트"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span class="hbl">사이트 전체</span></a><button class="act helpbtn hdemo" data-demo="all" title="실제 시연 화면"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg><span class="hbl">시연 화면</span></button><span class="ylslot yl"></span></div></header>
@@ -2888,9 +2893,10 @@ $('#fsList').addEventListener('click',e=>{const b=e.target.closest('[data-fs]');
 // 섹션 버튼: 크게 보기의 장면 막대 맨 왼쪽 칸으로 (이질감 없이)
 function fsPlace(){document.querySelectorAll('.fssec').forEach(x=>x.remove());const ic=($('#fsMenu svg')||{outerHTML:''}).outerHTML;
   const mk=()=>{const b=document.createElement('button');b.type='button';b.className='fssec';b.title='다른 섹션으로 이동';b.innerHTML=ic+'<b>섹션</b>';return b;};
-  const sp=document.querySelector('.stepper.present');if(sp){const bar=sp.querySelector('.stbar');if(bar)bar.prepend(mk());}
-  if(!$('#deckOv').hidden){const h=$('#deckOv .dkhead');if(h)h.prepend(mk());}}
-document.addEventListener('click',e=>{if(e.target.closest('.fssec')){fsList();$('#fsNav').classList.add('on');$('#fsDim').classList.add('on');}});
+  const ix=($('#fsExit svg')||{outerHTML:''}).outerHTML;const mx=()=>{const b=document.createElement('button');b.type='button';b.className='fssec fsx';b.title='크게 보기 끝내기 (Esc)';b.innerHTML=ix+'<b>축소</b>';return b;};
+  const sp=document.querySelector('.stepper.present');if(sp){const bar=sp.querySelector('.stbar');if(bar){bar.prepend(mk());bar.append(mx());}}
+  if(!$('#deckOv').hidden){const h=$('#deckOv .dkhead');if(h){h.prepend(mk());h.append(mx());}}}
+document.addEventListener('click',e=>{if(e.target.closest('.fsx')){fsExit();return;}if(e.target.closest('.fssec')){fsList();$('#fsNav').classList.add('on');$('#fsDim').classList.add('on');}});
 {const _p=present;present=function(a,b){_p(a,b);fsPlace();};const _o=dkOpen;dkOpen=function(...a){_o(...a);fsPlace();};const _c=dkClose;dkClose=function(){_c();fsPlace();};}
 
 // 수업 따라가기: 크게 보기는 학생(사용자) 것 — 강사 화면이 바뀌어도 풀리지 않게
